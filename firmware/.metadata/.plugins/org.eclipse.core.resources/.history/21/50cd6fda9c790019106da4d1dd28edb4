@@ -1,0 +1,15 @@
+#ifndef _SIGNAL_PROC_H_
+#define _SIGNAL_PROC_H_
+
+#include "types.h"
+
+
+#define VoltageMaxAdc (3)
+#define AdcBitResolution (12)
+#define Voltage_prez_rez (((double)3)/AdcVoltageRef)
+/*3V ----- 4096   ---- 0.000732421875/bit*/
+#define AdcVoltageRef (((T_ULONG)2)<<12)
+
+extern T_UWORD Convert_to_Voltage (T_UWORD uw_raw_value);
+
+#endif /*#ifndef _SIGNAL_PROC_H_*/

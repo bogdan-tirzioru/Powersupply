@@ -1,0 +1,4 @@
+#ifndef PROCESSING_H
+#define PROCESSING_H
+#include "micro.h"
+#endif

@@ -1,0 +1,10 @@
+#include "processing.h"
+#define ADCVoltageReferince ((double)3.0)
+#define ADCNrBitRezolution 12
+double Convert_to_Voltage(uint16_t ADC_LiniarVoltage)
+{
+	double ret_Value=0;
+	ret_Value = ADC_LiniarVoltage * (((uint32_t)1)<<ADCNrBitRezolution)/ADCVoltageReferince;
+	return ret_Value;
+}
+	//  d_Usense = ADC_to_Physical_VoltageDivider(d_ADCV1,10000,1100);

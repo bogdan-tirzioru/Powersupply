@@ -1,0 +1,16 @@
+#ifndef _SIGNAL_PROC_H_
+#define _SIGNAL_PROC_H_
+
+#include "types.h"
+
+
+#define VoltageMaxAdc (3)
+#define AdcBitResolution (12)
+#define Voltage_prez_rez (((double)3)/AdcVoltageRef)
+/*3V ----- 4096   ---- 0.000732421875/bit*/
+#define AdcVoltageRef (((T_ULONG)2)<<12)
+
+extern double Convert_to_Voltage (T_ULONG ul_raw_value);
+extern double ADC_to_Physical_VoltageDivider(double dAdcVoltage,uint16_t lui16_UpperRezistor,uint16_t lui16_LowerRezistor);
+
+#endif /*#ifndef _SIGNAL_PROC_H_*/

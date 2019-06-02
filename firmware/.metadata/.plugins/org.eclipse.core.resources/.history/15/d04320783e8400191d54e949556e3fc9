@@ -1,0 +1,18 @@
+#include "processing.h"
+#define ADCVoltageReferince ((double)3.0)
+#define ADCNrBitRezolution 12
+double Convert_to_Voltage(uint16_t ui16ADCRawNumber)
+{
+	double ret_Value=0;
+	/*x--->RawVoltage*/
+	/*3V--->2^12*/
+	ret_Value = ui16ADCRawNumber * (((uint32_t)1)<<ADCNrBitRezolution)/ADCVoltageReferince;
+	return ret_Value;
+}
+double ADC_to_Physical_VoltageDivider(uint16_t d_VoltageADC,uint32_t ui32RezistorUper,uint32_t ui32RezistorLower)
+{
+	double ret_Value=0;
+	if (((double)ui32RezistorUper+ui32RezistorLower)!=0)
+		ret_Value = ((double)ui32RezistorUper*d_VoltageADC)/(ui32RezistorUper+ui32RezistorLower);
+	return ret_Value;
+}

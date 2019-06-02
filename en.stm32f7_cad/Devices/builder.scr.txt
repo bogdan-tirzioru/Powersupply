@@ -1,0 +1,3 @@
+skill load "D:/myprojects/2018/powersupply/en.stm32f7_cad/Devices/builder.ile" 
+skill changeWorkingDir "D:/myprojects/2018/powersupply/en.stm32f7_cad/Devices" 
+exit 

@@ -1,0 +1,17 @@
+#include "micro.h"
+#include "signal_proc.h"
+
+/*-----------------------------------------------------------------------------------*/
+/*Description:  Function to convert raw values to voltage in Q20.12                   */
+/*                                                                                   */
+/*Parameters:   uw_voltage (input) voltage input in Q20.12 format                    */
+/*Return value: voltage in Q20.12 format                                             */
+/*-----------------------------------------------------------------------------------*/
+double Convert_to_Voltage (T_ULONG ul_raw_value)
+{
+ double ld_result = 0;
+ ld_result = (double)ul_raw_value * Voltage_prez_rez;
+
+ return ld_result;
+}
+

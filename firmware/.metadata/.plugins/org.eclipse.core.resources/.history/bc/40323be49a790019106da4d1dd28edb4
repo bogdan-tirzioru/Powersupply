@@ -1,0 +1,21 @@
+#include "micro.h"
+#include "signal_proc.h"
+
+/*-----------------------------------------------------------------------------------*/
+/*Description:  Function to convert raw values to voltage in physical                   */
+/*                                                                                   */
+/*Parameters:   uw_voltage (input) voltage input in Q20.12 format                    */
+/*Return value: voltage in double                                             */
+/*-----------------------------------------------------------------------------------*/
+double Convert_to_Voltage (T_ULONG ul_raw_value)
+{
+ double ld_result = 0;
+ ld_result = ((double)ul_raw_value) * Voltage_prez_rez;
+ return ld_result;
+}
+
+
+double ADC_to_Physical(double dAdcVoltage,uint16 lui16_UpperRezistor,uint16 lui16LowerRezistor)
+{
+
+}

@@ -1,0 +1,328 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=E:\my_projects\2013\power\software\adc.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=E:\my_projects\2013\power\software\buton.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=E:\my_projects\2013\power\software\init.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=E:\my_projects\2013\power\software\io.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=E:\my_projects\2013\power\software\main.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=E:\my_projects\2013\power\software\pwm.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=E:\my_projects\2013\power\software\signal_proc.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=E:\my_projects\2013\power\software\tasks.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=E:\my_projects\2013\power\software\uart.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=E:\my_projects\2013\power\software\power.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=E:\my_projects\2013\power\software\Display_2raw.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=E:\my_projects\2013\power\software\control.p1
+Folder=Intermediary
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=E:\my_projects\2013\power\software\power.cof
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=E:\my_projects\2013\power\software\power.hex
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File014]
+Location=E:\my_projects\2013\power\software\power.sym
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File015]
+Location=E:\my_projects\2013\power\software\power.map
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File016]
+Location=E:\my_projects\2013\power\software\power.hxl
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File017]
+Location=E:\my_projects\2013\power\software\startup.lst
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File018]
+Location=E:\my_projects\2013\power\software\startup.rlf
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File019]
+Location=E:\my_projects\2013\power\software\doprnt.p1
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File020]
+Location=E:\my_projects\2013\power\software\doprnt.pre
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File021]
+Location=E:\my_projects\2013\power\software\power.obj
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File022]
+Location=E:\my_projects\2013\power\software\power.lst
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File023]
+Location=E:\my_projects\2013\power\software\power.rlf
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
+[File024]
+Location=E:\my_projects\2013\power\software\power.sdb
+Folder=Output
+DeviceName=PIC16F876A
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC\9.82\bin\picc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|buton.c|init.c|io.c|main.c|pwm.c|signal_proc.c|tasks.c|uart.c|power.c|Display_2raw.c|control.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=DB=0 DC=9 DF=0 DD=1 DE=1 D7=1 EA=0 F5=0 EC=1 F0=0 EF=1 EE=1 EB=0 E9= E5=0 E7=0 E8=0 F2= F1=0 F3= F4= F6= F7= F8=1 F9=0 FA=0 FB=0 C9=3,1
+TraceCmdString=
+DebugOptions=
