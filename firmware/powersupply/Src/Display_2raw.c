@@ -79,6 +79,30 @@ void SetDisplay_Voltage(T_UWORD uwVoltage)
 	
 }
 
+
+void SetDisplay_VoltageD(double dVoltage)
+{
+    T_UBYTE lubNumber=0;
+    T_UBYTE lubSecondByte,lubFirstByte;
+	T_UWORD luwNumberFrac;
+
+    /*transform to 8 bit int part*/
+ //   ubNumberINT = uwVoltage >> Voltage_Resol_Sh;
+    lubNumber = (T_UBYTE)dVoltage;
+    lubFirstByte = lubNumber %10;
+    lubNumber = lubNumber /10;
+    lubSecondByte = lubNumber %10;
+
+	luwNumberFrac = ((dVoltage - lubNumber)*10);
+
+    ubSecondByte = lubSecondByte;
+	ubDisplay_buf[0] = ubSecondByte + 0x30;
+    ubFirstByte = lubFirstByte;
+	ubDisplay_buf[1] = ubFirstByte  + 0x30;
+	ubDisplay_buf[2] = 0x56;
+	ubDisplay_buf[3] = ((T_UBYTE)luwNumberFrac) + 0x30;
+
+}
 void SetDisplay_Current(T_UWORD uwCurent)
 {
 	T_UWORD luwTemp;    

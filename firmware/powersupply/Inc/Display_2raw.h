@@ -33,6 +33,7 @@ extern T_UBYTE ubDisplay_buf[MaxRawDisp];
  
 extern void InitDisplay2raw(void);
 extern void SetDisplay_Voltage(T_UWORD uwVoltage);
+extern void SetDisplay_VoltageD(double dVoltage);
 extern void SetDisplay_Current(T_UWORD uwCurent);
 extern void Dispaly2raw_task(void);
 extern void SetCommand(T_UBYTE ub_Command);
