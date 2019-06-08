@@ -1,6 +1,0 @@
-#include "processing.h"
-double Convert_to_Voltage(uint16_t ADC_LiniarVoltage)
-{
-
-}
-	//  d_Usense = ADC_to_Physical_VoltageDivider(d_ADCV1,10000,1100);
