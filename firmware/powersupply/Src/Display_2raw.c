@@ -85,15 +85,17 @@ void SetDisplay_VoltageD(double dVoltage)
     T_UBYTE lubNumber=0;
     T_UBYTE lubSecondByte,lubFirstByte;
 	T_UWORD luwNumberFrac;
+	T_UBYTE lubNumberInt;
 
     /*transform to 8 bit int part*/
  //   ubNumberINT = uwVoltage >> Voltage_Resol_Sh;
     lubNumber = (T_UBYTE)dVoltage;
+    lubNumberInt = lubNumber;
     lubFirstByte = lubNumber %10;
     lubNumber = lubNumber /10;
     lubSecondByte = lubNumber %10;
 
-	luwNumberFrac = ((dVoltage - lubNumber)*10);
+	luwNumberFrac = ((dVoltage - lubNumberInt)*10);
 
     ubSecondByte = lubSecondByte;
 	ubDisplay_buf[0] = ubSecondByte + 0x30;
@@ -168,6 +170,7 @@ void Dispaly2raw_task(void)
 			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
 			ub_state_Display2r = Display_init_DisplayOff;
 			//RC0 = ~RC0 ;
+			break;
 		case Display_init_DisplayOff:
 			/*wait >37us*/
 			/*display off*/

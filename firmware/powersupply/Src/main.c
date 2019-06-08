@@ -890,7 +890,7 @@ void StartDefaultTask(void const * argument)
 	  /*get actual voltage ADC1VMeas*/
 	  ADC_LiniarVoltage = HAL_ADC_GetValue(&hadc1);
 	  d_ADCV1 = Convert_to_Voltage(ADC_LiniarVoltage);
-	  d_Usense = ADC_to_Physical_VoltageDivider(d_ADCV1,10000,11000);
+	  d_Usense = ADC_to_Physical_VoltageDivider(d_ADCV1,10000,1100);
 	  SetDisplay_VoltageD(d_Usense);
 
 	  /*get actual voltage ADC1IMeas*/
