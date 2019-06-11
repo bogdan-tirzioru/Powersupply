@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/Display_2raw.c \
+../Src/dwt_delay.c \
 ../Src/freertos.c \
 ../Src/main.c \
 ../Src/processing.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 
 OBJS += \
 ./Src/Display_2raw.o \
+./Src/dwt_delay.o \
 ./Src/freertos.o \
 ./Src/main.o \
 ./Src/processing.o \
@@ -27,6 +29,7 @@ OBJS += \
 
 C_DEPS += \
 ./Src/Display_2raw.d \
+./Src/dwt_delay.d \
 ./Src/freertos.d \
 ./Src/main.d \
 ./Src/processing.d \

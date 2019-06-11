@@ -897,7 +897,7 @@ void StartDefaultTask(void const * argument)
 	  ADC_LiniarCurrent = HAL_ADC_GetValue(&hadc2);
 	  d_ADCV2 = Convert_to_Voltage(ADC_LiniarCurrent);
 	  d_Isense = ADC_to_PhysicalINA169(d_ADCV2,0.33,1000);
-	  SetDisplay_Current(d_Isense);
+	  SetDisplay_CurrentD(d_Isense);
 
 	  ADC_BuckCurrent = HAL_ADC_GetValue(&hadc3);
 	  HAL_ADC_Start(&hadc1);

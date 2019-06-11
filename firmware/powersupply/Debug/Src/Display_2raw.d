@@ -46,7 +46,8 @@ Src/Display_2raw.o: ../Src/Display_2raw.c \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_wwdg.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Inc/Display_2raw.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Inc/types.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Inc/micro.h
+ D:/gitRepos/Powersupply/firmware/powersupply/Inc/micro.h \
+ D:/gitRepos/Powersupply/firmware/powersupply/Inc/dwt_delay.h
 
 D:/gitRepos/Powersupply/firmware/powersupply/Inc/micro.h:
 
@@ -143,3 +144,5 @@ D:/gitRepos/Powersupply/firmware/powersupply/Inc/Display_2raw.h:
 D:/gitRepos/Powersupply/firmware/powersupply/Inc/types.h:
 
 D:/gitRepos/Powersupply/firmware/powersupply/Inc/micro.h:
+
+D:/gitRepos/Powersupply/firmware/powersupply/Inc/dwt_delay.h:

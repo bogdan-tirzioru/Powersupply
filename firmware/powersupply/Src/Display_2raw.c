@@ -1,5 +1,6 @@
 #include "micro.h"
 #include "Display_2raw.h"
+#include "dwt_delay.h"
 
 #define InitWait40ms 20
 #define InitWait2ms 1
@@ -49,6 +50,7 @@ void InitDisplay2raw()
 		ubDisplay_buf[ubDispIndex]= 0x20;
 	}
 	ubDisplay_buf[0] = 0x11;
+	DWT_Init();
 	ub_state_Display2r = Display_no_init;
 }
 
@@ -124,6 +126,21 @@ void SetDisplay_Current(T_UWORD uwCurent)
 	ubDisplay_buf[7] = ubFourthByte + 0x30;
 	ubDisplay_buf[8] = 0x41;
 	
+}
+
+void SetDisplay_CurrentD(double dCurent)
+{
+    /*transform to 8 bit int part*/
+    ubNumberINT = (T_UBYTE)dCurent;
+    uwNumberFRC = (T_UWORD)((dCurent-ubNumberINT) * 10);
+    ubFourthByte = uwNumberFRC;
+    ubThrdByte = ubNumberINT;
+	ubDisplay_buf[4] = 0x02F;
+	ubDisplay_buf[5] = ubThrdByte + 0x30;
+	ubDisplay_buf[6] =0x2E;
+	ubDisplay_buf[7] = ubFourthByte + 0x30;
+	ubDisplay_buf[8] = 0x41;
+
 }
 
 void SetDisplay_Current_target(T_UWORD uwCurent)
@@ -324,7 +341,7 @@ T_UBYTE ReadData(void)
 //	PIN_RS = Enable;
 //	PIN_R = Enable;
 //	PIN_E = Enable;
-	ub_Data = ((GPIOC->IDR) & 0x0f) | ((GPIOC->IDR) &0x1e0)>1;
+	ub_Data = ((GPIOC->IDR) & 0x0f) | (((GPIOC->IDR) &0x1e0)>>1);
 	//ub_Data = PORTB;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
@@ -357,8 +374,7 @@ T_UBYTE IsBusy(void)
 
 void LCD_delay_us(T_UBYTE delay)
 {
-	T_UBYTE index = 0;
-	for (index = 0; index<delay; index++);
+	DWT_Delay(delay);
 }
 
 
