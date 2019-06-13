@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="MX_WWDG_Init" key="selection"/>
+		<item value="HAL_TIM_Encoder_Init" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="HAL_TIM_Encoder_MspInit"/>
+			<item value="HAL_TIM_Encoder_Init"/>
 			<item value="MX_WWDG_Init"/>
 		</list>
 		<list key="replacehistory">

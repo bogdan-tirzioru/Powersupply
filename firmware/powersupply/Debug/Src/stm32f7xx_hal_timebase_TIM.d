@@ -21,20 +21,14 @@ Src/stm32f7xx_hal_timebase_TIM.o: ../Src/stm32f7xx_hal_timebase_TIM.c \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cryp.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cryp_ex.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dac.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dac_ex.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_iwdg.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h \
- D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rng.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc_ex.h \
  D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h \
@@ -88,14 +82,6 @@ D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/st
 
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h:
 
-D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h:
-
-D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc_ex.h:
-
-D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cryp.h:
-
-D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cryp_ex.h:
-
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dac.h:
 
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dac_ex.h:
@@ -108,13 +94,9 @@ D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/st
 
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h:
 
-D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_iwdg.h:
-
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h:
 
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h:
-
-D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rng.h:
 
 D:/gitRepos/Powersupply/firmware/powersupply/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h:
 

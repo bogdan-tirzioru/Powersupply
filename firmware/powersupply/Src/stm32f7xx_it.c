@@ -37,10 +37,14 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
-
+uint16_t ui16TimerValue;
+uint16_t ui16Period=10000;
+uint16_t ui16Speed =100;
+extern TIM_HandleTypeDef htim4;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern TIM_HandleTypeDef htim3;
 
 extern TIM_HandleTypeDef htim10;
 
@@ -179,6 +183,30 @@ void TIM1_UP_TIM10_IRQHandler(void)
   /* USER CODE BEGIN TIM1_UP_TIM10_IRQn 1 */
 
   /* USER CODE END TIM1_UP_TIM10_IRQn 1 */
+}
+
+/**
+* @brief This function handles TIM3 global interrupt.
+*/
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+  int16_t delta = ui16TimerValue - htim3.Instance->CNT;
+  if (delta>0)
+  {
+	  if (htim4.Instance->CCR1 < (ui16Period -ui16Speed))
+	  	  htim4.Instance->CCR1= htim4.Instance->CCR1 +ui16Speed;
+  }
+  else
+  {
+	  if (htim4.Instance->CCR1 > (ui16Speed))
+		htim4.Instance->CCR1 = htim4.Instance->CCR1 -ui16Speed;
+  }
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+
+  /* USER CODE END TIM3_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
