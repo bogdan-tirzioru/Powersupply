@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=U$4 NewDesignator=BATERY
+Change Component Designator: OldDesignator=U$5 NewDesignator=Q2
+Change Component Description : Designator=U$11 Old Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter. New Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter.
+Change Net Name : Old Net Name=NetU1_1 New Net Name=NetBATERY_P$2

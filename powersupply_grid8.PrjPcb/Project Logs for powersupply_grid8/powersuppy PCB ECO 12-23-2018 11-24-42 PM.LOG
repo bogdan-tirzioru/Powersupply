@@ -1,0 +1,14 @@
+Added Component: Designator=L1(WE-CNSW_1206)
+Added Component: Designator=L2(0805)
+Added Component: Designator=L3(0805)
+Added Pin To Net: NetName=NetC21_2 Pin=L1-1
+Added Pin To Net: NetName=NetL1_2 Pin=L1-2
+Added Pin To Net: NetName=NetL1_3 Pin=L1-3
+Added Pin To Net: NetName=NetC21_1 Pin=L1-4
+Added Pin To Net: NetName=NetL1_3 Pin=L2-1
+Added Pin To Net: NetName=+3V3 Pin=L2-2
+Added Pin To Net: NetName=NetL1_2 Pin=L3-1
+Added Pin To Net: NetName=GND Pin=L3-2
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component L1 WE-CNSW_1206
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component L2 WE-CBF_0805
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component L3 WE-CBF_0805

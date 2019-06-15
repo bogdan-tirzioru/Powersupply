@@ -1,0 +1,23 @@
+Removed Pin From Net: NetName=NetR43_2 Pin=R43-2
+Removed Pin From Net: NetName=NetR46_2 Pin=R46-2
+Removed Pin From Net: NetName=NetR43_2 Pin=TP28-TP
+Removed Pin From Net: NetName=NetR46_2 Pin=TP31-TP
+Added Component: Designator=D1(SOT23)
+Added Component: Designator=T1(SOT23-BEC)
+Added Pin To Net: NetName=NetR46_2 Pin=R43-2
+Added Pin To Net: NetName=NetR43_2 Pin=R46-2
+Added Pin To Net: NetName=NetR39_1 Pin=T1-C
+Added Pin To Net: NetName=GND Pin=T1-E
+Added Pin To Net: NetName=NetR46_2 Pin=TP28-TP
+Added Pin To Net: NetName=NetR43_2 Pin=TP31-TP
+Change Net Name : Old Net Name=NetR43_2 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetR46_2 New Net Name=NetD1_2
+Added Pin To Net: NetName=NetD1_3 Pin=JP4-1
+Added Net: Name=NetD1_3
+Added Pin To Net: NetName=NetJP4_2 Pin=JP4-2
+Added Pin To Net: NetName=NetJP4_2 Pin=T1-B
+Added Net: Name=NetJP4_2
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component D1 BAS70-06
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component T1 NPN bc846
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

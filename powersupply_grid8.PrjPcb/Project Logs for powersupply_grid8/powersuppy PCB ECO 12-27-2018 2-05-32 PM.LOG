@@ -1,0 +1,4 @@
+Added Component: Designator=TP_T1B(B2,54)
+Added Pin To Net: NetName=NetJP4_2 Pin=TP_T1B-TP
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP_T1B TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP_VLIN TPB2,54

@@ -1,0 +1,13 @@
+Added Component: Designator=U$6(USB_MICROB_PACKAGE)
+Added Pin To Net: NetName=NetR37_1 Pin=U$6-D+
+Added Pin To Net: NetName=NetR36_1 Pin=U$6-D-
+Added Pin To Net: NetName=GND Pin=U$6-GND
+Added Pin To Net: NetName=USB_OTG_HS_ID Pin=U$6-ID
+Added Pin To Net: NetName=NetC20_1 Pin=U$6-PAD1
+Added Pin To Net: NetName=NetC20_1 Pin=U$6-PAD2
+Added Pin To Net: NetName=NetC20_1 Pin=U$6-PAD3
+Added Pin To Net: NetName=NetC20_1 Pin=U$6-PAD4
+Added Pin To Net: NetName=NetC20_1 Pin=U$6-PAD5
+Added Pin To Net: NetName=NetC20_1 Pin=U$6-PAD6
+Added Pin To Net: NetName=NetL4_1 Pin=U$6-V
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component U$6 USB_MICROB

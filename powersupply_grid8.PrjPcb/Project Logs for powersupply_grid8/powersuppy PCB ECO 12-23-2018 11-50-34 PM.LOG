@@ -1,0 +1,4 @@
+Added Component: Designator=U$4(KEYSTONE101)
+Added Pin To Net: NetName=GND Pin=U$4-P$1
+Added Pin To Net: NetName=NetU1_1 Pin=U$4-P$2
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component U$4 101

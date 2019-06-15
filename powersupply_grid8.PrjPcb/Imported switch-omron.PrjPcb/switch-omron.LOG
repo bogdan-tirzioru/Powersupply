@@ -1,0 +1,21 @@
+Importer Log Report
+Project : switch-omron.PrjPcb
+
+Section : Analyze Document - C:\EAGLE 9.2.2\cache\lbr\switch-omron.lbr
+    Analyzing data of C:\EAGLE 9.2.2\cache\lbr\switch-omron.lbr
+    Load settings
+    Load layers 59
+    Load Library library
+    Load Library ""
+    Load Packages 9
+    ERROR: Unhandled typepackages3d
+    Load Symbols 5
+    Load DeviceSets 9
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+    ERROR: Unhandled typepackage3dinstances
+EndSection

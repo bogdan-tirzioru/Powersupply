@@ -1,0 +1,22 @@
+Added Component: Designator=S1(B3F-10XX)
+Added Component: Designator=SV1(ML6)
+Added Component: Designator=SV2(ML6)
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=GND Pin=S1-2
+Added Pin To Net: NetName=RESET Pin=S1-3
+Added Pin To Net: NetName=RESET Pin=S1-4
+Added Pin To Net: NetName=+5V Pin=SV1-1
+Added Pin To Net: NetName=USART_TX Pin=SV1-2
+Added Pin To Net: NetName=USART_RX Pin=SV1-3
+Added Pin To Net: NetName=+3V3 Pin=SV1-4
+Added Pin To Net: NetName=GND Pin=SV1-5
+Added Pin To Net: NetName=GND Pin=SV1-6
+Added Pin To Net: NetName=+5V Pin=SV2-1
+Added Pin To Net: NetName=SPI_MOSI Pin=SV2-2
+Added Pin To Net: NetName=SPI_MISO Pin=SV2-3
+Added Pin To Net: NetName=+3V3 Pin=SV2-4
+Added Pin To Net: NetName=SPI_SCK Pin=SV2-5
+Added Pin To Net: NetName=GND Pin=SV2-6
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component S1 10-XX
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component SV1 ML6
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component SV2 ML6

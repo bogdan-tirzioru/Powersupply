@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=TIM2_CH4 Pin=D1-TP
+Removed Pin From Net: NetName=TIM2_CH3 Pin=D2-TP
+Removed Pin From Net: NetName=TIM3_CH1 Pin=D4-TP
+Removed Pin From Net: NetName=TIM3_CH2 Pin=Designator3-TP
+Change Component Description : Designator=U$11 Old Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter. New Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter.
+Change Net Name : Old Net Name=TEST1 New Net Name=TEST4
+Added Pin To Net: NetName=TEST1 Pin=U1-25
+Added Net: Name=TEST1
+Added Pin To Net: NetName=TEST2 Pin=U1-26
+Added Net: Name=TEST2
+Added Pin To Net: NetName=TEST3 Pin=U1-57
+Added Net: Name=TEST3

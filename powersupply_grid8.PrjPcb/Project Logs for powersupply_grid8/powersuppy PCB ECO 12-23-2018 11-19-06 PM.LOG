@@ -1,0 +1,5 @@
+Added Component: Designator=IC1(TO220V)
+Added Pin To Net: NetName=V+ Pin=IC1-1
+Added Pin To Net: NetName=GND Pin=IC1-2
+Added Pin To Net: NetName=+5V Pin=IC1-3
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component IC1 78*TV

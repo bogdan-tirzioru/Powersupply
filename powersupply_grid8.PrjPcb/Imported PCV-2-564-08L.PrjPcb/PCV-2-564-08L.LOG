@@ -1,0 +1,14 @@
+Importer Log Report
+Project : PCV-2-564-08L.PrjPcb
+
+Section : Analyze Document - D:\myprojects\2018\powersupply\PCV-2-564-08L.lbr
+    Analyzing data of D:\myprojects\2018\powersupply\PCV-2-564-08L.lbr
+    Load settings
+    Load layers 46
+    Load Library library
+    Load Library ""
+    Load Packages 1
+    ERROR: Unhandled typedimension
+    Load Symbols 1
+    Load DeviceSets 1
+EndSection

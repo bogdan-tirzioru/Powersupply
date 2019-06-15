@@ -1,0 +1,480 @@
+Change Component Description : Designator=U$11 Old Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter. New Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter.
+Added Component: Designator=C1(EB30D)
+Added Component: Designator=C2(EB30D)
+Added Component: Designator=C4(C0402)
+Added Component: Designator=C5(C0402)
+Added Component: Designator=C7(EB30D)
+Added Component: Designator=C8(EB30D)
+Added Component: Designator=C9(E5-13)
+Added Component: Designator=C11(C0402)
+Added Component: Designator=C12(C0402)
+Added Component: Designator=C13(C0603)
+Added Component: Designator=C14(C0402)
+Added Component: Designator=C15(C0402)
+Added Component: Designator=C16(C0402)
+Added Component: Designator=C17(C0402)
+Added Component: Designator=C18(C0402)
+Added Component: Designator=C19(C0402)
+Added Component: Designator=C21(CAPAE430X610N)
+Added Component: Designator=C22(C0603)
+Added Component: Designator=C23(E2,5-7)
+Added Component: Designator=C24(C0603)
+Added Component: Designator=C26(C0402)
+Added Component: Designator=C27(C0402)
+Added Component: Designator=C28(C0402)
+Added Component: Designator=JP1(JP1)
+Added Component: Designator=JP2(JP1)
+Added Component: Designator=JP3(JP2)
+Added Component: Designator=JP4(JP2)
+Added Component: Designator=JP5(JP2)
+Added Component: Designator=R1(R0805)
+Added Component: Designator=R2(R2010)
+Added Component: Designator=R3(R2512)
+Added Component: Designator=R4(R0805)
+Added Component: Designator=R5(R0805)
+Added Component: Designator=R6(R0805)
+Added Component: Designator=R7(R0805)
+Added Component: Designator=R8(R0805)
+Added Component: Designator=R9(R0805)
+Added Component: Designator=R10(R0805)
+Added Component: Designator=R11(R0805)
+Added Component: Designator=R12(R0805)
+Added Component: Designator=R13(R0805)
+Added Component: Designator=R14(R2010)
+Added Component: Designator=R15(R2512)
+Added Component: Designator=R16(R0805)
+Added Component: Designator=R17(R0805)
+Added Component: Designator=R18(R0805)
+Added Component: Designator=R19(R0805)
+Added Component: Designator=R20(R0805)
+Added Component: Designator=R21(R0805)
+Added Component: Designator=R22(R0805)
+Added Component: Designator=R23(R0805)
+Added Component: Designator=R24(R0805)
+Added Component: Designator=R25(R0402)
+Added Component: Designator=R26(R0805)
+Added Component: Designator=R27(R0805)
+Added Component: Designator=R28(R0805)
+Added Component: Designator=R29(R0805)
+Added Component: Designator=R30(R0805)
+Added Component: Designator=R31(R0805)
+Added Component: Designator=R32(R0805)
+Added Component: Designator=R33(R0805)
+Added Component: Designator=R34(R0805)
+Added Component: Designator=R35(R0805)
+Added Component: Designator=R36(R0805)
+Added Component: Designator=R37(R0805)
+Added Component: Designator=R38(R0805)
+Added Component: Designator=R39(R0805)
+Added Component: Designator=R40(R0805)
+Added Component: Designator=R41(R0805)
+Added Component: Designator=R42(R0805)
+Added Component: Designator=R43(R0805)
+Added Component: Designator=R44(R0805)
+Added Component: Designator=R45(R0805)
+Added Component: Designator=R46(R0805)
+Added Component: Designator=R47(R0805)
+Added Component: Designator=R48(R0805)
+Added Component: Designator=R51(R0805)
+Added Component: Designator=R52(R0805)
+Added Component: Designator=R53(R0805)
+Added Component: Designator=R54(R0805)
+Added Component: Designator=R55(R0805)
+Added Component: Designator=R56(R0805)
+Added Component: Designator=R57(R0805)
+Added Component: Designator=TP1(B2,54)
+Added Component: Designator=TP2(B2,54)
+Added Component: Designator=TP3(B2,54)
+Added Component: Designator=TP4(B2,54)
+Added Component: Designator=TP5(B2,54)
+Added Component: Designator=TP6(B2,54)
+Added Component: Designator=TP7(B2,54)
+Added Component: Designator=TP8(B2,54)
+Added Component: Designator=TP9(B2,54)
+Added Component: Designator=TP10(B2,54)
+Added Component: Designator=TP11(B2,54)
+Added Component: Designator=TP12(B2,54)
+Added Component: Designator=TP13(B2,54)
+Added Component: Designator=TP14(B2,54)
+Added Component: Designator=TP15(B2,54)
+Added Component: Designator=TP16(B2,54)
+Added Component: Designator=TP17(B2,54)
+Added Component: Designator=TP18(B2,54)
+Added Component: Designator=TP19(B2,54)
+Added Component: Designator=TP20(B2,54)
+Added Component: Designator=TP21(B2,54)
+Added Component: Designator=TP22(B2,54)
+Added Component: Designator=TP23(B2,54)
+Added Component: Designator=TP24(B2,54)
+Added Component: Designator=TP25(B2,54)
+Added Component: Designator=TP26(B2,54)
+Added Component: Designator=TP27(B2,54)
+Added Component: Designator=TP28(B2,54)
+Added Component: Designator=TP29(B2,54)
+Added Component: Designator=TP30(B2,54)
+Added Component: Designator=TP31(B2,54)
+Added Component: Designator=TP32(B2,54)
+Added Component: Designator=TP33(B2,54)
+Added Component: Designator=TP34(B2,54)
+Added Component: Designator=X1(PAK100/2500-20)
+Added Component: Designator=X2(PAK100/2500-14)
+Added Pin To Net: NetName=NetBR2_+ Pin=C1-+
+Added Pin To Net: NetName=GND Pin=C1--
+Added Pin To Net: NetName=NetBR2_+ Pin=C2-+
+Added Pin To Net: NetName=GND Pin=C2--
+Added Pin To Net: NetName=V+ Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=+5V Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=V+ Pin=C7-+
+Added Pin To Net: NetName=GND Pin=C7--
+Added Pin To Net: NetName=V+ Pin=C8-+
+Added Pin To Net: NetName=GND Pin=C8--
+Added Pin To Net: NetName=NetC9_+ Pin=C9-+
+Added Pin To Net: NetName=GND Pin=C9--
+Added Pin To Net: NetName=NetC11_1 Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=+3V3 Pin=C12-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=+3V3 Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=+3V3 Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=+3V3 Pin=C15-1
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=NetC16_1 Pin=C16-1
+Added Pin To Net: NetName=GND Pin=C16-2
+Added Pin To Net: NetName=GND Pin=C17-1
+Added Pin To Net: NetName=NetC17_2 Pin=C17-2
+Added Pin To Net: NetName=GND Pin=C18-1
+Added Pin To Net: NetName=NetC18_2 Pin=C18-2
+Added Pin To Net: NetName=RESET Pin=C19-1
+Added Pin To Net: NetName=GND Pin=C19-2
+Added Pin To Net: NetName=NetC21_1 Pin=C21-1
+Added Pin To Net: NetName=NetC21_2 Pin=C21-2
+Added Pin To Net: NetName=V+ Pin=C22-1
+Added Pin To Net: NetName=GND Pin=C22-2
+Added Pin To Net: NetName=NetC23_+ Pin=C23-+
+Added Pin To Net: NetName=GND Pin=C23--
+Added Pin To Net: NetName=NetC21_1 Pin=C24-1
+Added Pin To Net: NetName=NetC21_2 Pin=C24-2
+Added Pin To Net: NetName=NetC26_1 Pin=C26-1
+Added Pin To Net: NetName=GND Pin=C26-2
+Added Pin To Net: NetName=VREF Pin=C27-1
+Added Pin To Net: NetName=GND Pin=C27-2
+Added Pin To Net: NetName=+5V Pin=C28-1
+Added Pin To Net: NetName=GND Pin=C28-2
+Added Pin To Net: NetName=NetBR2_+ Pin=JP1-1
+Added Pin To Net: NetName=NetC3_1 Pin=JP1-2
+Added Pin To Net: NetName=V+ Pin=JP2-1
+Added Pin To Net: NetName=NetJP2_2 Pin=JP2-2
+Added Pin To Net: NetName=VPOT Pin=JP3-1
+Added Pin To Net: NetName=NetJP3_2 Pin=JP3-2
+Added Pin To Net: NetName=VDAC Pin=JP3-3
+Added Pin To Net: NetName=NetD1_3 Pin=JP4-1
+Added Pin To Net: NetName=NetJP4_2 Pin=JP4-2
+Added Pin To Net: NetName=NetJP4_3 Pin=JP4-3
+Added Pin To Net: NetName=IPOT Pin=JP5-1
+Added Pin To Net: NetName=NetJP5_2 Pin=JP5-2
+Added Pin To Net: NetName=IDAC Pin=JP5-3
+Added Pin To Net: NetName=GND Pin=R1-1
+Added Pin To Net: NetName=IMEAS_BUCK Pin=R1-2
+Added Pin To Net: NetName=NetCBUCK1_+ Pin=R2-1
+Added Pin To Net: NetName=NetM01_P$4 Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=NetM01_P$4 Pin=R3-2
+Added Pin To Net: NetName=NetC6_2 Pin=R4-1
+Added Pin To Net: NetName=NetBR2_+ Pin=R4-2
+Added Pin To Net: NetName=N53 Pin=R5-1
+Added Pin To Net: NetName=NetBR2_+ Pin=R5-2
+Added Pin To Net: NetName=N53 Pin=R6-1
+Added Pin To Net: NetName=NetBR2_+ Pin=R6-2
+Added Pin To Net: NetName=N54 Pin=R7-1
+Added Pin To Net: NetName=NetCBUCK1_+ Pin=R7-2
+Added Pin To Net: NetName=N54 Pin=R8-1
+Added Pin To Net: NetName=NetCBUCK1_+ Pin=R8-2
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=N53 Pin=R9-2
+Added Pin To Net: NetName=GND Pin=R10-1
+Added Pin To Net: NetName=N53 Pin=R10-2
+Added Pin To Net: NetName=GND Pin=R11-1
+Added Pin To Net: NetName=N54 Pin=R11-2
+Added Pin To Net: NetName=GND Pin=R12-1
+Added Pin To Net: NetName=N54 Pin=R12-2
+Added Pin To Net: NetName=GND Pin=R13-1
+Added Pin To Net: NetName=IMEAS Pin=R13-2
+Added Pin To Net: NetName=NetJP2_2 Pin=R14-1
+Added Pin To Net: NetName=NetC9_+ Pin=R14-2
+Added Pin To Net: NetName=GND Pin=R15-1
+Added Pin To Net: NetName=NetC9_+ Pin=R15-2
+Added Pin To Net: NetName=NetR16_1 Pin=R16-1
+Added Pin To Net: NetName=NetJP2_2 Pin=R16-2
+Added Pin To Net: NetName=NetR17_1 Pin=R17-1
+Added Pin To Net: NetName=NetC9_+ Pin=R17-2
+Added Pin To Net: NetName=NetC10_2 Pin=R18-1
+Added Pin To Net: NetName=NetJP2_2 Pin=R18-2
+Added Pin To Net: NetName=NetC10_2 Pin=R19-1
+Added Pin To Net: NetName=NetJP2_2 Pin=R19-2
+Added Pin To Net: NetName=NetR16_1 Pin=R20-1
+Added Pin To Net: NetName=GND Pin=R20-2
+Added Pin To Net: NetName=NetR21_1 Pin=R21-1
+Added Pin To Net: NetName=V+ Pin=R21-2
+Added Pin To Net: NetName=NetR22_1 Pin=R22-1
+Added Pin To Net: NetName=NetR17_1 Pin=R22-2
+Added Pin To Net: NetName=NetC10_2 Pin=R23-1
+Added Pin To Net: NetName=NetR23_2 Pin=R23-2
+Added Pin To Net: NetName=GND Pin=R24-1
+Added Pin To Net: NetName=NetR24_2 Pin=R24-2
+Added Pin To Net: NetName=NetC16_1 Pin=R25-1
+Added Pin To Net: NetName=NetC11_1 Pin=R25-2
+Added Pin To Net: NetName=JNTRST Pin=R26-1
+Added Pin To Net: NetName=+3V3 Pin=R26-2
+Added Pin To Net: NetName=JNTRST Pin=R27-1
+Added Pin To Net: NetName=+3V3 Pin=R27-2
+Added Pin To Net: NetName=JNTRST Pin=R28-1
+Added Pin To Net: NetName=+3V3 Pin=R28-2
+Added Pin To Net: NetName=GND Pin=R29-1
+Added Pin To Net: NetName=NetR29_2 Pin=R29-2
+Added Pin To Net: NetName=GND Pin=R30-1
+Added Pin To Net: NetName=NetR30_2 Pin=R30-2
+Added Pin To Net: NetName=GND Pin=R31-1
+Added Pin To Net: NetName=NetR31_2 Pin=R31-2
+Added Pin To Net: NetName=+3V3 Pin=R32-1
+Added Pin To Net: NetName=JTDO Pin=R32-2
+Added Pin To Net: NetName=+3V3 Pin=R33-1
+Added Pin To Net: NetName=RESET Pin=R33-2
+Added Pin To Net: NetName=GND Pin=R34-1
+Added Pin To Net: NetName=JTCLK Pin=R34-2
+Added Pin To Net: NetName=GND Pin=R35-1
+Added Pin To Net: NetName=NetC20_1 Pin=R35-2
+Added Pin To Net: NetName=NetR36_1 Pin=R36-1
+Added Pin To Net: NetName=USB_OTG_HS_DM Pin=R36-2
+Added Pin To Net: NetName=NetR37_1 Pin=R37-1
+Added Pin To Net: NetName=USB_OTG_HS_DP Pin=R37-2
+Added Pin To Net: NetName=NetC10_1 Pin=R38-1
+Added Pin To Net: NetName=NetR23_2 Pin=R38-2
+Added Pin To Net: NetName=NetR39_1 Pin=R39-1
+Added Pin To Net: NetName=NetR21_1 Pin=R39-2
+Added Pin To Net: NetName=NetR39_1 Pin=R40-1
+Added Pin To Net: NetName=NetR21_1 Pin=R40-2
+Added Pin To Net: NetName=GND Pin=R41-1
+Added Pin To Net: NetName=NetC10_2 Pin=R41-2
+Added Pin To Net: NetName=GND Pin=R42-1
+Added Pin To Net: NetName=NetC10_2 Pin=R42-2
+Added Pin To Net: NetName=NetR23_2 Pin=R43-1
+Added Pin To Net: NetName=NetD1_2 Pin=R43-2
+Added Pin To Net: NetName=NetJP3_2 Pin=R44-1
+Added Pin To Net: NetName=NetR44_2 Pin=R44-2
+Added Pin To Net: NetName=NetC25_2 Pin=R45-1
+Added Pin To Net: NetName=NetR45_2 Pin=R45-2
+Added Pin To Net: NetName=NetR46_1 Pin=R46-1
+Added Pin To Net: NetName=NetD1_1 Pin=R46-2
+Added Pin To Net: NetName=PWM_BUCK Pin=R47-1
+Added Pin To Net: NetName=NetR47_2 Pin=R47-2
+Added Pin To Net: NetName=PWM_BUCK Pin=R48-1
+Added Pin To Net: NetName=NetR48_2 Pin=R48-2
+Added Pin To Net: NetName=NetC25_1 Pin=R51-1
+Added Pin To Net: NetName=NetR45_2 Pin=R51-2
+Added Pin To Net: NetName=NetJP4_3 Pin=R52-1
+Added Pin To Net: NetName=NetR52_2 Pin=R52-2
+Added Pin To Net: NetName=NetR22_1 Pin=R53-1
+Added Pin To Net: NetName=NetC25_2 Pin=R53-2
+Added Pin To Net: NetName=NetR45_2 Pin=R54-1
+Added Pin To Net: NetName=NetR54_2 Pin=R54-2
+Added Pin To Net: NetName=NetJP5_2 Pin=R55-1
+Added Pin To Net: NetName=NetR55_2 Pin=R55-2
+Added Pin To Net: NetName=NetR56_1 Pin=R56-1
+Added Pin To Net: NetName=GND Pin=R56-2
+Added Pin To Net: NetName=NetR56_1 Pin=R57-1
+Added Pin To Net: NetName=NetR52_2 Pin=R57-2
+Added Pin To Net: NetName=IMEAS_BUCK Pin=TP1-TP
+Added Pin To Net: NetName=NetBR2_+ Pin=TP2-TP
+Added Pin To Net: NetName=NetBR2_+ Pin=TP3-TP
+Added Pin To Net: NetName=NetC3_1 Pin=TP4-TP
+Added Pin To Net: NetName=NetCBUCK1_+ Pin=TP5-TP
+Added Pin To Net: NetName=NetCBUCK1_+ Pin=TP6-TP
+Added Pin To Net: NetName=NetM01_P$4 Pin=TP7-TP
+Added Pin To Net: NetName=NetTP8_TP Pin=TP8-TP
+Added Pin To Net: NetName=NetTP9_TP Pin=TP9-TP
+Added Pin To Net: NetName=PWM_BUCK Pin=TP10-TP
+Added Pin To Net: NetName=VBUCK Pin=TP11-TP
+Added Pin To Net: NetName=VIN Pin=TP12-TP
+Added Pin To Net: NetName=+5V Pin=TP13-TP
+Added Pin To Net: NetName=N53 Pin=TP14-TP
+Added Pin To Net: NetName=N54 Pin=TP15-TP
+Added Pin To Net: NetName=EN_BUCK Pin=TP16-TP
+Added Pin To Net: NetName=IMEAS Pin=TP17-TP
+Added Pin To Net: NetName=NetJP2_2 Pin=TP18-TP
+Added Pin To Net: NetName=NetJP2_2 Pin=TP19-TP
+Added Pin To Net: NetName=NetC9_+ Pin=TP20-TP
+Added Pin To Net: NetName=VMEAS Pin=TP21-TP
+Added Pin To Net: NetName=NetR16_1 Pin=TP22-TP
+Added Pin To Net: NetName=NetR17_1 Pin=TP23-TP
+Added Pin To Net: NetName=NetR21_1 Pin=TP24-TP
+Added Pin To Net: NetName=NetC10_2 Pin=TP25-TP
+Added Pin To Net: NetName=+3V3 Pin=TP26-TP
+Added Pin To Net: NetName=NetR39_1 Pin=TP27-TP
+Added Pin To Net: NetName=NetD1_2 Pin=TP28-TP
+Added Pin To Net: NetName=NetJP3_2 Pin=TP29-TP
+Added Pin To Net: NetName=NetR22_1 Pin=TP30-TP
+Added Pin To Net: NetName=NetD1_1 Pin=TP31-TP
+Added Pin To Net: NetName=NetR45_2 Pin=TP32-TP
+Added Pin To Net: NetName=VREF Pin=TP33-TP
+Added Pin To Net: NetName=NetJP5_2 Pin=TP34-TP
+Added Pin To Net: NetName=+3V3 Pin=X1-1
+Added Pin To Net: NetName=+3V3 Pin=X1-2
+Added Pin To Net: NetName=JNTRST Pin=X1-3
+Added Pin To Net: NetName=GND Pin=X1-4
+Added Pin To Net: NetName=JNTRST Pin=X1-5
+Added Pin To Net: NetName=GND Pin=X1-6
+Added Pin To Net: NetName=JNTRST Pin=X1-7
+Added Pin To Net: NetName=GND Pin=X1-8
+Added Pin To Net: NetName=JTCLK Pin=X1-9
+Added Pin To Net: NetName=GND Pin=X1-10
+Added Pin To Net: NetName=NetR29_2 Pin=X1-11
+Added Pin To Net: NetName=GND Pin=X1-12
+Added Pin To Net: NetName=JTDO Pin=X1-13
+Added Pin To Net: NetName=GND Pin=X1-14
+Added Pin To Net: NetName=RESET Pin=X1-15
+Added Pin To Net: NetName=GND Pin=X1-16
+Added Pin To Net: NetName=NetR30_2 Pin=X1-17
+Added Pin To Net: NetName=GND Pin=X1-18
+Added Pin To Net: NetName=NetR31_2 Pin=X1-19
+Added Pin To Net: NetName=GND Pin=X1-20
+Added Pin To Net: NetName=GND Pin=X2-1
+Added Pin To Net: NetName=+5V Pin=X2-2
+Added Pin To Net: NetName=GND Pin=X2-3
+Added Pin To Net: NetName=LCD_RS Pin=X2-4
+Added Pin To Net: NetName=LCD_RW Pin=X2-5
+Added Pin To Net: NetName=LCD_EN Pin=X2-6
+Added Pin To Net: NetName=LCD_D0 Pin=X2-7
+Added Pin To Net: NetName=LCD_D1 Pin=X2-8
+Added Pin To Net: NetName=LCD_D2 Pin=X2-9
+Added Pin To Net: NetName=LCD_D3 Pin=X2-10
+Added Pin To Net: NetName=LCD_D4 Pin=X2-11
+Added Pin To Net: NetName=LCD_D5 Pin=X2-12
+Added Pin To Net: NetName=LCD_D6 Pin=X2-13
+Added Pin To Net: NetName=LCD_D7 Pin=X2-14
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C1 15000u
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C2 15000u
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C4 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C5 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C7 15000u
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C8 15000u
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C9 470U
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C11 20p
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C12 100n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C13 100n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C14 100n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C15 100n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C16 20p
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C17 10p
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C18 10p
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C19 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C21 2.2UF
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C22 100n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C23 4.7u
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C24 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C26 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C27 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component C28 100n
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component JP1 JP1E
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component JP2 JP1E
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component JP3 JP2E
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component JP4 JP2E
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component JP5 JP2E
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R1 100k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R2 0.33
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R3 1K
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R4 10
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R5 20k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R6 20k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R7 20k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R8 20k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R9 2.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R10 2.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R11 2.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R12 2.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R13 100k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R14 0.33
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R15 1K
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R16 100k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R17 100k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R18 20k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R19 20k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R20 1M
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R21 10k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R22 1M
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R23 1M
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R24 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R25 1M
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R26 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R27 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R28 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R29 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R30 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R31 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R32 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R33 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R34 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R35 1M
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R36 10
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R37 10
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R38 100
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R39 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R40 1.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R41 2.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R42 2.2k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R43 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R44 100
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R45 1M
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R46 10
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R47 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R48 10k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R51 100
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R52 10
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R53 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R54 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R55 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R56 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R57 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP1 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP2 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP3 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP4 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP5 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP6 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP7 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP8 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP9 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP10 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP11 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP12 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP13 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP14 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP15 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP16 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP17 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP18 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP19 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP20 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP21 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP22 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP23 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP24 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP25 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP26 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP27 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP28 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP29 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP30 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP31 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP32 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP33 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component TP34 TPB2,54
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component X1 2520-
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component X2 2514-

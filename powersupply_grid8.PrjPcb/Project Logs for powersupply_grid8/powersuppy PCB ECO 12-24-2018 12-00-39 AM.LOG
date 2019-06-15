@@ -1,0 +1,14 @@
+Added Component: Designator=T2(SOT23-BEC)
+Added Component: Designator=U2(SOIC127P600X175-8N)
+Added Pin To Net: NetName=NetR54_2 Pin=T2-B
+Added Pin To Net: NetName=GND Pin=T2-C
+Added Pin To Net: NetName=NetR46_1 Pin=T2-E
+Added Pin To Net: NetName=NetC21_1 Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Pin To Net: NetName=GND Pin=U2-3
+Added Pin To Net: NetName=GND Pin=U2-5
+Added Pin To Net: NetName=GND Pin=U2-6
+Added Pin To Net: NetName=GND Pin=U2-7
+Added Pin To Net: NetName=V+ Pin=U2-8
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component T2 BC856
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component U2 KF33BD-TR

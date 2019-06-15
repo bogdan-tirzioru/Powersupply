@@ -1,0 +1,10 @@
+Added Component: Designator=SV3(MA03-1)
+Added Component: Designator=SV4(MA03-1)
+Added Pin To Net: NetName=VREF Pin=SV3-1
+Added Pin To Net: NetName=VPOT Pin=SV3-2
+Added Pin To Net: NetName=GND Pin=SV3-3
+Added Pin To Net: NetName=VREF Pin=SV4-1
+Added Pin To Net: NetName=IPOT Pin=SV4-2
+Added Pin To Net: NetName=GND Pin=SV4-3
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component SV3 MA03-1
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component SV4 MA03-1

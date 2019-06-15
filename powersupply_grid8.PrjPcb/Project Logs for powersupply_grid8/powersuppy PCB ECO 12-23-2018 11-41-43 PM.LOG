@@ -1,0 +1,10 @@
+Added Component: Designator=Q1(TC26V)
+Added Component: Designator=U$5(ABM3B)
+Added Pin To Net: NetName=NetC18_2 Pin=Q1-1
+Added Pin To Net: NetName=NetC17_2 Pin=Q1-2
+Added Pin To Net: NetName=NetC11_1 Pin=U$5-P$1
+Added Pin To Net: NetName=GND Pin=U$5-P$2
+Added Pin To Net: NetName=NetC16_1 Pin=U$5-P$3
+Added Pin To Net: NetName=GND Pin=U$5-P$4
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component Q1 32k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component U$5 ABM3B

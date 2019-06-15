@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=NetCBUCK1_+ Pin=R7-2
+Removed Pin From Net: NetName=NetCBUCK1_+ Pin=R8-2
+Removed Pin From Net: NetName=NetJP2_2 Pin=R18-2
+Removed Pin From Net: NetName=NetJP2_2 Pin=R19-2
+Removed Pin From Net: NetName=NetCBUCK1_+ Pin=TP6-TP
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=TP6
+Change Component Description : Designator=U$11 Old Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter. New Description=The NCP5901B is a high performance dual MOSFET gate driver
+optimized to drive the gates of both high-side and low-side power
+MOSFETs in a synchronous buck converter.
+Added Pin To Net: NetName=NetCON_BUCK_OUT_1 Pin=R7-2
+Added Pin To Net: NetName=NetCON_BUCK_OUT_1 Pin=R8-2
+Added Pin To Net: NetName=NetC9_+ Pin=R18-2
+Added Pin To Net: NetName=NetC9_+ Pin=R19-2
+Change Net Name : Old Net Name=NetC10_2 New Net Name=FEEDBACK_LIN

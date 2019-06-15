@@ -1,0 +1,4 @@
+Added Component: Designator=LBUCK1(PCV-2-564-08L)
+Added Pin To Net: NetName=NetC3_1 Pin=LBUCK1-P$1
+Added Pin To Net: NetName=NetCBUCK1_+ Pin=LBUCK1-P$2
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component LBUCK1 560uH

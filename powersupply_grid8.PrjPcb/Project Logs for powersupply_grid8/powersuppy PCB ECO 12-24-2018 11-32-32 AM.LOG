@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=CON1 NewDesignator=CON_LIN_IN
+Change Component Designator: OldDesignator=U$3 NewDesignator=CON_BUCK_IN
+Change Component Designator: OldDesignator=U$7 NewDesignator=CON_BUCK_OUT
+Change Component Designator: OldDesignator=U$15 NewDesignator=CON_LIN_OUT
+Change Net Name : Old Net Name=NetM01_P$4 New Net Name=NetCON_BUCK_OUT_1
