@@ -75,8 +75,6 @@
 #define ADC2_IMEAS_GPIO_Port GPIOA
 #define ADC1_VBUCK_Pin GPIO_PIN_2
 #define ADC1_VBUCK_GPIO_Port GPIOA
-#define ADC3_IBUCK_Pin GPIO_PIN_3
-#define ADC3_IBUCK_GPIO_Port GPIOA
 #define LCD_D4_Pin GPIO_PIN_4
 #define LCD_D4_GPIO_Port GPIOC
 #define LCD_D5_Pin GPIO_PIN_6
