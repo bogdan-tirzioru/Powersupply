@@ -143,14 +143,14 @@ int main(void)
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_ADC3_Init();
-  MX_DAC_Init();
-  MX_RTC_Init();
-  MX_SPI3_Init();
+ // MX_DAC_Init();
+ // MX_RTC_Init();
+ // MX_SPI3_Init();
   MX_TIM4_Init();
-  MX_USART1_UART_Init();
-  MX_USB_OTG_HS_USB_Init();
-  MX_WWDG_Init();
-  MX_TIM2_Init();
+//  MX_USART1_UART_Init();
+//  MX_USB_OTG_HS_USB_Init();
+//  MX_WWDG_Init();
+//  MX_TIM2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 
@@ -708,15 +708,22 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, TEST3_Pin|EN_BUCK_Pin|EN_REF_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LCD_EN_Pin LCD_D0_Pin LCD_D1_Pin LCD_D2_Pin 
-                           LCD_D3_Pin LCD_D4_Pin LCD_D5_Pin LCD_D6_Pin 
-                           LCD_D7_Pin LCD_RS_Pin LCD_RW_Pin */
-  GPIO_InitStruct.Pin = LCD_EN_Pin|LCD_D0_Pin|LCD_D1_Pin|LCD_D2_Pin 
-                          |LCD_D3_Pin|LCD_D4_Pin|LCD_D5_Pin|LCD_D6_Pin 
-                          |LCD_D7_Pin|LCD_RS_Pin|LCD_RW_Pin;
+  /*Configure GPIO pin : LCD_EN_Pin */
+  GPIO_InitStruct.Pin = LCD_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LCD_EN_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : LCD_D0_Pin LCD_D1_Pin LCD_D2_Pin LCD_D3_Pin 
+                           LCD_D4_Pin LCD_D5_Pin LCD_D6_Pin LCD_D7_Pin 
+                           LCD_RS_Pin LCD_RW_Pin */
+  GPIO_InitStruct.Pin = LCD_D0_Pin|LCD_D1_Pin|LCD_D2_Pin|LCD_D3_Pin 
+                          |LCD_D4_Pin|LCD_D5_Pin|LCD_D6_Pin|LCD_D7_Pin 
+                          |LCD_RS_Pin|LCD_RW_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB0 PB1 */
@@ -749,21 +756,21 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = LCD_C2_Pin|LCD_C1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : TEST4_Pin */
   GPIO_InitStruct.Pin = TEST4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(TEST4_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : TEST3_Pin EN_BUCK_Pin EN_REF_Pin */
   GPIO_InitStruct.Pin = TEST3_Pin|EN_BUCK_Pin|EN_REF_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
@@ -801,7 +808,7 @@ void StartDefaultTask(void const * argument)
   for(;;)
   {
 	  /*refresh watch dog*/
-	  HAL_WWDG_Refresh(&hwwdg);
+	//  HAL_WWDG_Refresh(&hwwdg);
 	  /*counter task*/
 	  ui32counter++;
 	  HAL_ADC_Start(&hadc1);

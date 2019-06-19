@@ -17,6 +17,7 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="MX_GPIO_Init"/>
 			<item value="HAL_TIM_Encoder_MspInit"/>
 			<item value="SetDisplay_Current"/>
 			<item value="HAL_GetTick"/>
