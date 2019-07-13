@@ -5,6 +5,7 @@
 #define InitWait40ms 20
 #define InitWait2ms 1
 #define InitWaitRefreshms 100
+#define InitWait4ms 2
 
 #define LCD_CMD_FUNC 0x20
 #define LCD_8BIT_INTERFACE 0x10
@@ -16,6 +17,7 @@
 #define LCD_CMD_DISP_ONOFF 0x08
 #define LCD_CMD_CLEAR 0x01
 #define LCD_CMD_ENTRY 0x04
+/*I / D = 1: Increment, I / D = 0: Decrement.*/
 #define LCD_ENTRY_I 0x02
 #define LCD_ENTRY_S 0x01
 #define LCD_CMD_DISP_ON 0x04
@@ -171,7 +173,7 @@ void Dispaly2raw_task(void)
 			if (ub_counter_1 > InitWait40ms)
 			{
 				/*setup interface , nr of lines and font size first */
-				SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
+				SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE );
 				ub_state_Display2r = Display_init_step_1;
 				ub_counter_1 = 0;
 				//RC0 = ~RC0;
@@ -183,14 +185,27 @@ void Dispaly2raw_task(void)
 		break;
 		case Display_init_step_1:
 			/*wait >4.1ms*/
-			/*setup interface , nr of lines and font size*/
-			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
-			ub_state_Display2r = Display_init_step_2;
+			if (ub_counter_1 > InitWait4ms)
+			{
+				/*setup interface , nr of lines and font size*/
+				SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE );
+				ub_state_Display2r = Display_init_step_2;
+			}
+			else
+			{
+				ub_counter_1++;
+			}
 		break;
 		case Display_init_step_2:
-			/*wait >4.1ms*/
+			/*wait >100us*/
 			/*setup interface , nr of lines and font size*/
-			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
+			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE);
+			ub_state_Display2r = Display_init_step_3;
+		break;
+		case Display_init_step_3:
+			/*wait >100us*/
+			/*setup interface , nr of lines and font size*/
+			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE|LCD_2LINES );
 			ub_state_Display2r = Display_init_DisplayOff;
 		break;
 		case Display_init_DisplayOff:
@@ -199,7 +214,7 @@ void Dispaly2raw_task(void)
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
 			{
-				SetCommand(LCD_CMD_DISP_ONOFF | LCD_CMD_DISP_ON | LCD_CMD_CURSOR_ON | LCD_CMD_POSITION_ON);
+				SetCommand(LCD_CMD_DISP_ONOFF);
 				ub_state_Display2r = Display_init_ClearDisplay;		
 			}
 			else
@@ -299,39 +314,32 @@ void Dispaly2raw_task(void)
 		break;
 	}
 }
-
+T_UBYTE ub_log[512];
+T_UBYTE ub_index=0;
 void SetCommand(T_UBYTE ub_Command)
 {
+	ub_log[ub_index]=ub_Command;
+	ub_index++;
 	GPIOC->MODER=GPIOC->MODER | (0x00055555);
-	//TRISB = Direction_OUPUT;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin|LCD_RW_Pin,GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_SET);
-	//PIN_RS = Disable;
-	//PIN_R = Disable;
-	//PIN_E = Enable;
 	GPIOC->ODR = (ub_Command & 0x0f) | (((T_UWORD)ub_Command & 0xf0)<<1);
-	//PORTB = ub_Command;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
-	//PIN_E = Disable;
 }
 
 void WriteData(T_UBYTE ub_Data)
 {
+	ub_log[ub_index]=ub_Data;
+	ub_index++;
 	GPIOC->MODER=GPIOC->MODER | (0x00055555);
-	//TRISB = Direction_OUPUT;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin,GPIO_PIN_SET);
 	HAL_GPIO_WritePin(GPIOC,LCD_RW_Pin,GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_SET);
-	//PIN_RS = Enable;
-	//PIN_R = Disable;
-	//PIN_E = Enable;
 	GPIOC->ODR = (ub_Data & 0x0f) | (((T_UWORD)ub_Data & 0xf0)<<1);
-	//PORTB = ub_Data;
 	LCD_delay_us(10);
-	//PIN_E = Disable;
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
 }
 
@@ -339,18 +347,12 @@ T_UBYTE ReadData(void)
 {
 	T_UBYTE ub_Data;
 	GPIOC->MODER=GPIOC->MODER & 0xFFF00000;
-	//TRISB = Direction_INPUT;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin|LCD_RW_Pin|LCD_EN_Pin,GPIO_PIN_SET);
-
-//	PIN_RS = Enable;
-//	PIN_R = Enable;
-//	PIN_E = Enable;
 	ub_Data = ((GPIOC->IDR) & 0x0f) | (((GPIOC->IDR) &0x1e0)>>1);
-	//ub_Data = PORTB;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
-//	PIN_E = Disable;
+
 	return ub_Data;
 }
 
@@ -358,22 +360,14 @@ T_UBYTE IsBusy(void)
 {
 	T_UBYTE ub_Bussy = 1;
 #if 1
-	//TRISB = Direction_INPUT;
 	GPIOC->MODER=GPIOC->MODER & 0xFFF00000;
 	LCD_delay_us(10);
 
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin,GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOC,LCD_RW_Pin|LCD_EN_Pin,GPIO_PIN_SET);
-
-//	PIN_RS = Disable;
-//	PIN_R = Enable;
-//	PIN_E = Enable;
-
 	ub_Bussy = ((GPIOC->IDR) & 0x0f) | (((GPIOC->IDR) &0x1e0)>>1);
-	//ub_Bussy = PORTB;
 	LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
-//	PIN_E = Disable;
 	LCD_delay_us(10);
 	ub_Bussy = ((ub_Bussy) & 0x80 )>> 0x7;
 #endif

@@ -833,7 +833,7 @@ void StartDefaultTask(void const * argument)
 	  HAL_ADC_Start(&hadc1);
 	  ADC_BuckVoltage = HAL_ADC_GetValue(&hadc1);
 	  Dispaly2raw_task();
-	  osDelay(10);
+	  osDelay(2);
   }
   /* USER CODE END 5 */ 
 }
