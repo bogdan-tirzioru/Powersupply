@@ -146,12 +146,12 @@ int main(void)
  // MX_DAC_Init();
  // MX_RTC_Init();
  // MX_SPI3_Init();
-  MX_TIM4_Init();
+//  MX_TIM4_Init();
 //  MX_USART1_UART_Init();
 //  MX_USB_OTG_HS_USB_Init();
 //  MX_WWDG_Init();
 //  MX_TIM2_Init();
-  MX_TIM3_Init();
+//  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -801,9 +801,9 @@ void StartDefaultTask(void const * argument)
   /*Initialization of LCD Display*/
   InitDisplay2raw();
   /*start capturing in encoder module*/
-  HAL_TIM_Encoder_Start_IT(&htim3,TIM_CHANNEL_ALL);
+//  HAL_TIM_Encoder_Start_IT(&htim3,TIM_CHANNEL_ALL);
   /*start pwm module*/
-  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);
+//  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);
   /* Infinite loop */
   for(;;)
   {
@@ -833,7 +833,7 @@ void StartDefaultTask(void const * argument)
 	  HAL_ADC_Start(&hadc1);
 	  ADC_BuckVoltage = HAL_ADC_GetValue(&hadc1);
 	  Dispaly2raw_task();
-	  osDelay(1);
+	  osDelay(10);
   }
   /* USER CODE END 5 */ 
 }

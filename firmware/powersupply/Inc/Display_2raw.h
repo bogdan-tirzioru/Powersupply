@@ -15,7 +15,8 @@
 
 enum Display2raw_State{
 Display_no_init = 0,
-Display_init_step = 1,
+Display_init_step_1 = 1,
+Display_init_step_2 = 9,
 Display_init_DisplayOff = 2,
 Display_init_ClearDisplay =3,
 Display_init_EntryMode = 4,

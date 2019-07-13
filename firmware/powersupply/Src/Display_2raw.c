@@ -172,7 +172,7 @@ void Dispaly2raw_task(void)
 			{
 				/*setup interface , nr of lines and font size first */
 				SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
-				ub_state_Display2r = Display_init_step;
+				ub_state_Display2r = Display_init_step_1;
 				ub_counter_1 = 0;
 				//RC0 = ~RC0;
 			}
@@ -181,14 +181,20 @@ void Dispaly2raw_task(void)
 				ub_counter_1++;
 			}
 		break;
-		case Display_init_step:
-			/*wait >37us*/
+		case Display_init_step_1:
+			/*wait >4.1ms*/
+			/*setup interface , nr of lines and font size*/
+			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
+			ub_state_Display2r = Display_init_step_2;
+		break;
+		case Display_init_step_2:
+			/*wait >4.1ms*/
 			/*setup interface , nr of lines and font size*/
 			SetCommand(LCD_CMD_FUNC | LCD_8BIT_INTERFACE | LCD_1LINES | LCD_FONT_SMALL |LCD_NOT_USED );
 			ub_state_Display2r = Display_init_DisplayOff;
-			//RC0 = ~RC0 ;
+		break;
 		case Display_init_DisplayOff:
-			/*wait >37us*/
+			/*wait >100us*/
 			/*display off*/
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
