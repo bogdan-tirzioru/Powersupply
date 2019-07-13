@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;powersupply/Src/processing&apos; to &apos;processing.c&apos;" description="Rename resource &apos;processing&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/processing" name="processing.c" stamp="1559372897344" updateReferences="true"/>
-</session>
