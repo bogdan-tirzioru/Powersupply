@@ -247,7 +247,7 @@ void Dispaly2raw_task(void)
 		break;
 		case Display_init_DisplayOn:
 			/*setup interface , nr of lines and font size*/
-			//SetCommand(LCD_CMD_DISP_ONOFF | LCD_CMD_DISP_ON | LCD_CMD_CURSOR_ON | LCD_CMD_POSITION_ON);
+			SetCommand(LCD_CMD_DISP_ONOFF | LCD_CMD_DISP_ON | LCD_CMD_CURSOR_ON | LCD_CMD_POSITION_ON);
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
 			{
@@ -276,7 +276,7 @@ void Dispaly2raw_task(void)
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
 			{
-				SetCommand(LCD_CMD_RETURN_HOME);
+ 				SetCommand(LCD_CMD_RETURN_HOME);
 				ub_state_Display2r = Display_write_string;
 			}
 		break;
