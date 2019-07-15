@@ -36,7 +36,8 @@ T_UBYTE ub_busy;
 T_UBYTE ub_char;
 T_UBYTE ub_Datawrite;
 T_UBYTE ubDispIndex;
-T_UBYTE ubDisplay_buf[MaxRawDisp];
+T_UBYTE ubDisplay_buf[MaxRawDisp] ="Ch1=            ";
+T_UBYTE ubDisplay_buf2[MaxRawDisp]="Ch2=            ";
 T_UWORD uw_currentaddress;
 
 void InitDisplay2raw()
@@ -50,44 +51,12 @@ void InitDisplay2raw()
 	ub_busy = 0;
 	ub_char = 0;
 	//RC0 = 0;
-	for (ubDispIndex = 0;ubDispIndex<MaxRawDisp;ubDispIndex++)
-	{
-		ubDisplay_buf[ubDispIndex]= 0x20;
-	}
-	ubDisplay_buf[0] = 0x11;
 	DWT_Init();
 	ub_state_Display2r = Display_no_init;
 }
 
 
-void SetDisplay_Voltage(T_UWORD uwVoltage)
-{
-    T_UBYTE lubNumber=0;
-    T_UBYTE lubSecondByte,lubFirstByte;
-	T_UWORD luwNumberFrac;
-    
-    /*transform to 8 bit int part*/
-    ubNumberINT = uwVoltage >> Voltage_Resol_Sh;
-    lubNumber = ubNumberINT;
-    lubFirstByte = lubNumber %10;
-    lubNumber = lubNumber /10;
-    lubSecondByte = lubNumber %10;
-	
-	luwNumberFrac = uwVoltage & 0x07ff;
-	luwNumberFrac = luwNumberFrac * 10;
-	luwNumberFrac = luwNumberFrac >> Voltage_Resol_Sh;
-	
-    ubSecondByte = lubSecondByte;
-	ubDisplay_buf[0] = ubSecondByte + 0x30;
-    ubFirstByte = lubFirstByte;
-	ubDisplay_buf[1] = ubFirstByte  + 0x30;
-	ubDisplay_buf[2] = 0x56;
-	ubDisplay_buf[3] = ((T_UBYTE)luwNumberFrac) + 0x30;
-	
-}
-
-
-void SetDisplay_VoltageD(double dVoltage)
+void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf)
 {
     T_UBYTE lubNumber=0;
     T_UBYTE lubSecondByte,lubFirstByte;
@@ -105,46 +74,28 @@ void SetDisplay_VoltageD(double dVoltage)
 	luwNumberFrac = ((dVoltage - lubNumberInt)*10);
 
     ubSecondByte = lubSecondByte;
-	ubDisplay_buf[0] = ubSecondByte + 0x30;
+	pubDisplay_buf[4] = ubSecondByte + 0x30;
     ubFirstByte = lubFirstByte;
-	ubDisplay_buf[1] = ubFirstByte  + 0x30;
-	ubDisplay_buf[2] = 0x56;
-	ubDisplay_buf[3] = ((T_UBYTE)luwNumberFrac) + 0x30;
+	pubDisplay_buf[5] = ubFirstByte  + 0x30;
+	pubDisplay_buf[6] = '.';
+	pubDisplay_buf[7] = ((T_UBYTE)luwNumberFrac) + 0x30;
+	pubDisplay_buf[8] = 'V';
 
 }
-void SetDisplay_Current(T_UWORD uwCurent)
-{
-	T_UWORD luwTemp;    
-    /*transform to 8 bit int part*/
-	luwTemp = (T_UWORD)uwCurent >> Curent_Resol_Sh;
-    ubNumberINT = luwTemp;
- 	uwNumberFRC = uwCurent & (0x0FFF);
-    uwNumberFRC = uwNumberFRC * 10;
-    /*copy to buffer numbers */
-    uwNumberFRC = uwNumberFRC >> Curent_Resol_Sh;
-	
-    ubFourthByte = uwNumberFRC;
-    ubThrdByte = ubNumberINT;
-	ubDisplay_buf[4] = 0x02F; 
-	ubDisplay_buf[5] = ubThrdByte + 0x30;
-	ubDisplay_buf[6] =0x2E;
-	ubDisplay_buf[7] = ubFourthByte + 0x30;
-	ubDisplay_buf[8] = 0x41;
-	
-}
 
-void SetDisplay_CurrentD(double dCurent)
+
+void SetDisplay_CurrentD(double dCurent,T_UBYTE *pubDisplay_buf)
 {
     /*transform to 8 bit int part*/
     ubNumberINT = (T_UBYTE)dCurent;
     uwNumberFRC = (T_UWORD)((dCurent-ubNumberINT) * 10);
     ubFourthByte = uwNumberFRC;
     ubThrdByte = ubNumberINT;
-	ubDisplay_buf[4] = 0x02F;
-	ubDisplay_buf[5] = ubThrdByte + 0x30;
-	ubDisplay_buf[6] =0x2E;
-	ubDisplay_buf[7] = ubFourthByte + 0x30;
-	ubDisplay_buf[8] = 0x41;
+    pubDisplay_buf[9] = 0x02F;
+    pubDisplay_buf[10] = ubThrdByte + 0x30;
+    pubDisplay_buf[11] =0x2E;
+    pubDisplay_buf[12] = ubFourthByte + 0x30;
+    pubDisplay_buf[13] = 0x41;
 
 }
 
@@ -167,8 +118,9 @@ void SetDisplay_Current_target(T_UWORD uwCurent)
 	ubDisplay_buf[14] = ubFourthByte + 0x30;
 	ubDisplay_buf[15] =0x41;
 }
-void Dispaly2raw_task(void)
+T_UBYTE Dispaly2raw_task(void)
 {
+	T_UBYTE ub_UpdateOk =0;
 	switch (ub_state_Display2r)
 	{
 		case Display_no_init:
@@ -291,6 +243,7 @@ void Dispaly2raw_task(void)
 					uw_counter++;
 				}
 			}
+			ub_UpdateOk =1;
 		break;
 		case Display_clear_screen:
 			ub_busy = IsBusy();
@@ -327,7 +280,7 @@ void Dispaly2raw_task(void)
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
 			{
-				ub_Datawrite = ubDisplay_buf[ubDispIndex];
+				ub_Datawrite = ubDisplay_buf2[ubDispIndex];
 				WriteData(ub_Datawrite);
 				ubDispIndex++;
 				if(ubDispIndex > MaxRawDisp)
@@ -342,6 +295,7 @@ void Dispaly2raw_task(void)
 			ub_state_Display2r = Display_no_init;
 		break;
 	}
+	return ub_UpdateOk;
 }
 T_UBYTE ub_log[512];
 T_UBYTE ub_index=0;

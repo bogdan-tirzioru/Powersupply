@@ -31,16 +31,17 @@ Display_write_string_l2=12
 };
 #define MaxRawDisp 16
 extern T_UBYTE ubDisplay_buf[MaxRawDisp];
+extern T_UBYTE ubDisplay_buf2[MaxRawDisp];
 
 #define SetLimitWarnning() {ubDisplay_buf[11] =0xC6;}
 #define ResetLimitWarning() {ubDisplay_buf[11] =0x11;}
  
 extern void InitDisplay2raw(void);
 extern void SetDisplay_Voltage(T_UWORD uwVoltage);
-extern void SetDisplay_VoltageD(double dVoltage);
+extern void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf);
 extern void SetDisplay_Current(T_UWORD uwCurent);
-extern void SetDisplay_CurrentD(double dCurent);
-extern void Dispaly2raw_task(void);
+extern void SetDisplay_CurrentD(double dCurent,T_UBYTE *pubDisplay_buf);
+extern T_UBYTE Dispaly2raw_task(void);
 extern void SetCommand(T_UBYTE ub_Command);
 extern void WriteData(T_UBYTE ub_Data);
 extern T_UBYTE ReadData(void);

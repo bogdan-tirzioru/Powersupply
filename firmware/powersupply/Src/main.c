@@ -787,6 +787,8 @@ uint32_t ADC_BuckCurrent;
 double d_ADCV1,d_ADCV2;
 double d_Usense,d_Isense;
 
+double d_ADCBuck,d_ADCVBUCKI;
+double d_UsenseBuck,d_IsenseBuck;
 uint32_t ui32counter;
 /* USER CODE END 4 */
 
@@ -795,7 +797,7 @@ void StartDefaultTask(void const * argument)
 {
 
   /* USER CODE BEGIN 5 */
-
+  T_UBYTE ub_DisplayPosible= 0;
   /*Initialization of task counter*/
   ui32counter = 0;
   /*Initialization of LCD Display*/
@@ -821,18 +823,31 @@ void StartDefaultTask(void const * argument)
 	  ADC_LiniarVoltage = HAL_ADC_GetValue(&hadc1);
 	  d_ADCV1 = Convert_to_Voltage(ADC_LiniarVoltage);
 	  d_Usense = ADC_to_Physical_VoltageDivider(d_ADCV1,10000,1100);
-	  SetDisplay_VoltageD(d_Usense);
+	  if (ub_DisplayPosible == 1)
+		  SetDisplay_VoltageD(d_Usense,(T_UBYTE *)&ubDisplay_buf[0]);
 
 	  /*get actual voltage ADC1IMeas*/
 	  ADC_LiniarCurrent = HAL_ADC_GetValue(&hadc2);
 	  d_ADCV2 = Convert_to_Voltage(ADC_LiniarCurrent);
 	  d_Isense = ADC_to_PhysicalINA169(d_ADCV2,0.33,1000);
-	  SetDisplay_CurrentD(d_Isense);
+	  if (ub_DisplayPosible == 1)
+		  SetDisplay_CurrentD(d_Isense,(T_UBYTE *)&ubDisplay_buf[0]);
 
 	  ADC_BuckCurrent = HAL_ADC_GetValue(&hadc3);
+	  d_ADCVBUCKI = Convert_to_Voltage(ADC_BuckCurrent);
+	  d_IsenseBuck = ADC_to_PhysicalINA169(d_ADCVBUCKI,0.33,1000);
+	  if (ub_DisplayPosible == 1)
+		  SetDisplay_CurrentD(d_IsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
+
 	  HAL_ADC_Start(&hadc1);
+	  HAL_ADC_PollForConversion(&hadc1,ADC_TIMEOUT);
 	  ADC_BuckVoltage = HAL_ADC_GetValue(&hadc1);
-	  Dispaly2raw_task();
+	  d_ADCBuck = Convert_to_Voltage(ADC_BuckVoltage);
+	  d_UsenseBuck = ADC_to_Physical_VoltageDivider(d_ADCBuck,10000,1100);
+	  if (ub_DisplayPosible == 1)
+		  SetDisplay_VoltageD(d_UsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
+
+	  ub_DisplayPosible = Dispaly2raw_task();
 	  osDelay(2);
   }
   /* USER CODE END 5 */ 
