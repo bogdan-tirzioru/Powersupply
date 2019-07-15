@@ -4,7 +4,7 @@
 
 #define InitWait40ms 20
 #define InitWait2ms 1
-#define InitWaitRefreshms 100
+#define InitWaitRefreshms 50
 #define InitWait4ms 2
 
 #define LCD_CMD_FUNC 0x20
@@ -24,17 +24,20 @@
 #define LCD_CMD_CURSOR_ON 0x02
 #define LCD_CMD_POSITION_ON 0x01
 #define LCD_CMD_RETURN_HOME 0x02
+#define LCD_CMD_SET_DDRAM 0xC0
 
 
 T_UBYTE ubFirstByte,ubSecondByte,ubThrdByte,ubFourthByte;
 T_UWORD ubNumberINT,uwNumberFRC;
 T_UBYTE ub_state_Display2r;
 T_UBYTE ub_counter_1;
+T_UWORD uw_counter;
 T_UBYTE ub_busy;
 T_UBYTE ub_char;
 T_UBYTE ub_Datawrite;
 T_UBYTE ubDispIndex;
 T_UBYTE ubDisplay_buf[MaxRawDisp];
+T_UWORD uw_currentaddress;
 
 void InitDisplay2raw()
 {
@@ -262,11 +265,13 @@ void Dispaly2raw_task(void)
 		break;
 		case Display_init_DisplayOn:
 			/*setup interface , nr of lines and font size*/
-			SetCommand(LCD_CMD_DISP_ONOFF | LCD_CMD_DISP_ON | LCD_CMD_CURSOR_ON | LCD_CMD_POSITION_ON);
+			//SetCommand(LCD_CMD_DISP_ONOFF | LCD_CMD_DISP_ON | LCD_CMD_CURSOR_ON | LCD_CMD_POSITION_ON);
+			SetCommand(LCD_CMD_DISP_ONOFF | LCD_CMD_DISP_ON);
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
 			{
 				ub_state_Display2r = Display_idle;
+				uw_counter =0;
 			}
 			
 			//RC0 = ~RC0 ;
@@ -275,15 +280,15 @@ void Dispaly2raw_task(void)
 			ub_busy = IsBusy();
 			if (ub_busy ==0)
 			{
-				if (ub_counter_1 > InitWaitRefreshms)
+				if (uw_counter > InitWaitRefreshms)
 				{
 					ub_state_Display2r = Display_clear_screen;
 					ubDispIndex = 0;
-					ub_counter_1 = 0;
+					uw_counter = 0;
 				}
 				else
 				{
-					ub_counter_1++;
+					uw_counter++;
 				}
 			}
 		break;
@@ -304,8 +309,32 @@ void Dispaly2raw_task(void)
 				ubDispIndex++;
 				if(ubDispIndex > MaxRawDisp)
 				{
+					ub_state_Display2r = Display_MoveSecond;
+					ubDispIndex = 0;
+					uw_counter =0;
+				}
+			}
+		break;
+		case Display_MoveSecond:
+			ub_busy = IsBusy();
+			if (ub_busy ==0)
+			{
+ 				SetCommand(LCD_CMD_SET_DDRAM);
+				ub_state_Display2r = Display_write_string_l2;
+			}
+			break;
+		case Display_write_string_l2:
+			ub_busy = IsBusy();
+			if (ub_busy ==0)
+			{
+				ub_Datawrite = ubDisplay_buf[ubDispIndex];
+				WriteData(ub_Datawrite);
+				ubDispIndex++;
+				if(ubDispIndex > MaxRawDisp)
+				{
 					ub_state_Display2r = Display_idle;
 					ubDispIndex = 0;
+					uw_counter =0;
 				}
 			}
 		break;
@@ -321,13 +350,12 @@ void SetCommand(T_UBYTE ub_Command)
 	ub_log[ub_index]=ub_Command;
 	ub_index++;
 	GPIOC->MODER=GPIOC->MODER | (0x00055555);
-	LCD_delay_us(10);
-	GPIOC->ODR &= 0XFE00;
+	//LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin|LCD_RW_Pin,GPIO_PIN_RESET);
-
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_SET);
+	GPIOC->ODR &= 0XFE00;
 	GPIOC->ODR |= ((ub_Command & 0x1f) | (((T_UWORD)ub_Command & 0xE0)<<1));
-	LCD_delay_us(10);
+	LCD_delay_us(1);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
 }
 
@@ -336,13 +364,14 @@ void WriteData(T_UBYTE ub_Data)
 	ub_log[ub_index]=ub_Data;
 	ub_index++;
 	GPIOC->MODER=GPIOC->MODER | (0x00055555);
-	LCD_delay_us(10);
-	GPIOC->ODR &= 0XFE00;
+	//LCD_delay_us(10);
+
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin,GPIO_PIN_SET);
 	HAL_GPIO_WritePin(GPIOC,LCD_RW_Pin,GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_SET);
+	GPIOC->ODR &= 0XFE00;
 	GPIOC->ODR |= ((ub_Data & 0x1f) | (((T_UWORD)ub_Data & 0xE0)<<1));
-	LCD_delay_us(10);
+	LCD_delay_us(1);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
 }
 
@@ -350,7 +379,7 @@ T_UBYTE ReadData(void)
 {
 	T_UBYTE ub_Data;
 	GPIOC->MODER=GPIOC->MODER & 0xFFF00000;
-	LCD_delay_us(10);
+	//LCD_delay_us(10);
 	GPIOC->ODR &= 0XFE00;
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin|LCD_RW_Pin|LCD_EN_Pin,GPIO_PIN_SET);
 	ub_Data = ((GPIOC->IDR) & 0x1f) | (((GPIOC->IDR) &0x1c0)>>1);
@@ -363,16 +392,20 @@ T_UBYTE ReadData(void)
 T_UBYTE IsBusy(void)
 {
 	T_UBYTE ub_Bussy = 1;
+	T_UWORD uw_data = 0;
 #if 1
-	GPIOC->MODER=GPIOC->MODER & 0xFFF00000;
-	LCD_delay_us(10);
+	GPIOC->MODER=GPIOC->MODER & 0xFFFC0000;
+	//LCD_delay_us(10);
 	HAL_GPIO_WritePin(GPIOC,LCD_RS_Pin,GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOC,LCD_RW_Pin|LCD_EN_Pin,GPIO_PIN_SET);
-	ub_Bussy = ((GPIOC->IDR) & 0x1f) | (((GPIOC->IDR) &0x1c0)>>1);
-	LCD_delay_us(10);
+	LCD_delay_us(1);
+	uw_data = ((GPIOC->IDR) & 0x1f) | (((GPIOC->IDR) &0x1c0)>>1);
 	HAL_GPIO_WritePin(GPIOC,LCD_EN_Pin,GPIO_PIN_RESET);
-	LCD_delay_us(10);
-	ub_Bussy = ((ub_Bussy) & 0x80 )>> 0x7;
+	LCD_delay_us(1);
+	uw_currentaddress = uw_data & 0x7f;
+	ub_Bussy = ((uw_data) & 0x100 )>> 0x8;
+#else
+	ub_Bussy = 0;
 #endif
 	return ub_Bussy;
 }

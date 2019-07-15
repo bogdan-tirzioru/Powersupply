@@ -25,6 +25,8 @@ Display_init_DisplayOn =5,
 Display_idle = 6,
 Display_clear_screen = 7,
 Display_write_string = 8,
+Display_MoveSecond =11,
+Display_write_string_l2=12
 
 };
 #define MaxRawDisp 16
