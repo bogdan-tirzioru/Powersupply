@@ -797,6 +797,8 @@ void StartDefaultTask(void const * argument)
 {
 
   /* USER CODE BEGIN 5 */
+  ADC_ChannelConfTypeDef sConfig;
+
   T_UBYTE ub_DisplayPosible= 0;
   /*Initialization of task counter*/
   ui32counter = 0;
@@ -806,6 +808,8 @@ void StartDefaultTask(void const * argument)
 //  HAL_TIM_Encoder_Start_IT(&htim3,TIM_CHANNEL_ALL);
   /*start pwm module*/
 //  HAL_TIM_PWM_Start(&htim4,TIM_CHANNEL_1);
+  sConfig.Rank = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
   /* Infinite loop */
   for(;;)
   {
@@ -813,6 +817,9 @@ void StartDefaultTask(void const * argument)
 	//  HAL_WWDG_Refresh(&hwwdg);
 	  /*counter task*/
 	  ui32counter++;
+
+	  sConfig.Channel = ADC_CHANNEL_0;
+	  HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_Start(&hadc2);
 	  HAL_ADC_Start(&hadc3);
@@ -839,6 +846,8 @@ void StartDefaultTask(void const * argument)
 	  if (ub_DisplayPosible == 1)
 		  SetDisplay_CurrentD(d_IsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
 
+	  sConfig.Channel = ADC_CHANNEL_2;
+	  HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 	  HAL_ADC_Start(&hadc1);
 	  HAL_ADC_PollForConversion(&hadc1,ADC_TIMEOUT);
 	  ADC_BuckVoltage = HAL_ADC_GetValue(&hadc1);

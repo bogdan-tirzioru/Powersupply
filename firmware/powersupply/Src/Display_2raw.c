@@ -59,9 +59,10 @@ void InitDisplay2raw()
 void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf)
 {
     T_UBYTE lubNumber=0;
-    T_UBYTE lubSecondByte,lubFirstByte;
-	T_UWORD luwNumberFrac;
-	T_UBYTE lubNumberInt;
+    T_UBYTE lubSecondByte=0,lubFirstByte=0;
+	T_UWORD luwNumberFrac=0;
+	T_UBYTE lubNumberInt=0;
+	T_UBYTE luwNumberSecFrac=0;
 
     /*transform to 8 bit int part*/
  //   ubNumberINT = uwVoltage >> Voltage_Resol_Sh;
@@ -72,6 +73,7 @@ void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf)
     lubSecondByte = lubNumber %10;
 
 	luwNumberFrac = ((dVoltage - lubNumberInt)*10);
+	luwNumberSecFrac = ((dVoltage - lubNumberInt)*100) - luwNumberFrac;
 
     ubSecondByte = lubSecondByte;
 	pubDisplay_buf[4] = ubSecondByte + 0x30;
@@ -79,7 +81,8 @@ void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf)
 	pubDisplay_buf[5] = ubFirstByte  + 0x30;
 	pubDisplay_buf[6] = '.';
 	pubDisplay_buf[7] = ((T_UBYTE)luwNumberFrac) + 0x30;
-	pubDisplay_buf[8] = 'V';
+	pubDisplay_buf[8] = ((T_UBYTE)luwNumberSecFrac)+0x30;
+	pubDisplay_buf[9] = 'V';
 
 }
 
@@ -91,11 +94,11 @@ void SetDisplay_CurrentD(double dCurent,T_UBYTE *pubDisplay_buf)
     uwNumberFRC = (T_UWORD)((dCurent-ubNumberINT) * 10);
     ubFourthByte = uwNumberFRC;
     ubThrdByte = ubNumberINT;
-    pubDisplay_buf[9] = 0x02F;
-    pubDisplay_buf[10] = ubThrdByte + 0x30;
-    pubDisplay_buf[11] =0x2E;
-    pubDisplay_buf[12] = ubFourthByte + 0x30;
-    pubDisplay_buf[13] = 0x41;
+    pubDisplay_buf[10] = 0x02F;
+    pubDisplay_buf[11] = ubThrdByte + 0x30;
+    pubDisplay_buf[12] =0x2E;
+    pubDisplay_buf[13] = ubFourthByte + 0x30;
+    pubDisplay_buf[14] = 0x41;
 
 }
 
