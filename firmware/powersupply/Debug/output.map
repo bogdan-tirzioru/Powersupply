@@ -7912,34 +7912,33 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.16
                 0x08003138       0x54 Src/Display_2raw.o
                 0x08003138                InitDisplay2raw
  .text.SetDisplay_VoltageD
-                0x0800318c       0xd4 Src/Display_2raw.o
+                0x0800318c       0xd8 Src/Display_2raw.o
                 0x0800318c                SetDisplay_VoltageD
  .text.SetDisplay_CurrentD
-                0x08003260       0x70 Src/Display_2raw.o
-                0x08003260                SetDisplay_CurrentD
+                0x08003264       0x70 Src/Display_2raw.o
+                0x08003264                SetDisplay_CurrentD
  .text.LCD_delay_us
-                0x080032d0        0x8 Src/Display_2raw.o
-                0x080032d0                LCD_delay_us
+                0x080032d4        0x8 Src/Display_2raw.o
+                0x080032d4                LCD_delay_us
  .text.SetCommand
-                0x080032d8       0x70 Src/Display_2raw.o
-                0x080032d8                SetCommand
+                0x080032dc       0x70 Src/Display_2raw.o
+                0x080032dc                SetCommand
  .text.WriteData
-                0x08003348       0x7c Src/Display_2raw.o
-                0x08003348                WriteData
- .text.IsBusy   0x080033c4       0x64 Src/Display_2raw.o
-                0x080033c4                IsBusy
+                0x0800334c       0x7c Src/Display_2raw.o
+                0x0800334c                WriteData
+ .text.IsBusy   0x080033c8       0x64 Src/Display_2raw.o
+                0x080033c8                IsBusy
  .text.Dispaly2raw_task
-                0x08003428      0x248 Src/Display_2raw.o
-                0x08003428                Dispaly2raw_task
+                0x0800342c      0x248 Src/Display_2raw.o
+                0x0800342c                Dispaly2raw_task
  .text.DWT_Init
-                0x08003670       0x2c Src/dwt_delay.o
-                0x08003670                DWT_Init
+                0x08003674       0x2c Src/dwt_delay.o
+                0x08003674                DWT_Init
  .text.DWT_Delay
-                0x0800369c       0x2c Src/dwt_delay.o
-                0x0800369c                DWT_Delay
+                0x080036a0       0x2c Src/dwt_delay.o
+                0x080036a0                DWT_Delay
  .text.MX_GPIO_Init
-                0x080036c8      0x16c Src/main.o
- *fill*         0x08003834        0x4 
+                0x080036cc      0x16c Src/main.o
  .text.StartDefaultTask
                 0x08003838      0x1c0 Src/main.o
                 0x08003838                StartDefaultTask
@@ -8634,7 +8633,7 @@ OUTPUT(powersupply.elf elf32-littlearm)
  .debug_macro   0x00026232      0x45a Src/stm32f7xx_it.o
  .debug_macro   0x0002668c      0x3a2 Src/system_stm32f7xx.o
 
-.debug_line     0x00000000     0xf373
+.debug_line     0x00000000     0xf371
  .debug_line    0x00000000      0xae6 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
  .debug_line    0x00000ae6      0xd24 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
  .debug_line    0x0000180a      0xaff Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
@@ -8649,15 +8648,15 @@ OUTPUT(powersupply.elf elf32-littlearm)
  .debug_line    0x0000874c      0xe18 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
  .debug_line    0x00009564      0x60c Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/port.o
  .debug_line    0x00009b70      0x634 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
- .debug_line    0x0000a1a4      0xa7e Src/Display_2raw.o
- .debug_line    0x0000ac22      0x8da Src/dwt_delay.o
- .debug_line    0x0000b4fc      0xd22 Src/main.o
- .debug_line    0x0000c21e      0x8f5 Src/processing.o
- .debug_line    0x0000cb13      0xab4 Src/stm32f7xx_hal_msp.o
- .debug_line    0x0000d5c7      0x8f3 Src/stm32f7xx_hal_timebase_TIM.o
- .debug_line    0x0000deba      0xb51 Src/stm32f7xx_it.o
- .debug_line    0x0000ea0b      0x8e9 Src/system_stm32f7xx.o
- .debug_line    0x0000f2f4       0x7f startup/startup_stm32f732xx.o
+ .debug_line    0x0000a1a4      0xa7c Src/Display_2raw.o
+ .debug_line    0x0000ac20      0x8da Src/dwt_delay.o
+ .debug_line    0x0000b4fa      0xd22 Src/main.o
+ .debug_line    0x0000c21c      0x8f5 Src/processing.o
+ .debug_line    0x0000cb11      0xab4 Src/stm32f7xx_hal_msp.o
+ .debug_line    0x0000d5c5      0x8f3 Src/stm32f7xx_hal_timebase_TIM.o
+ .debug_line    0x0000deb8      0xb51 Src/stm32f7xx_it.o
+ .debug_line    0x0000ea09      0x8e9 Src/system_stm32f7xx.o
+ .debug_line    0x0000f2f2       0x7f startup/startup_stm32f732xx.o
 
 .debug_str      0x00000000    0xea230
  .debug_str     0x00000000    0xde831 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o

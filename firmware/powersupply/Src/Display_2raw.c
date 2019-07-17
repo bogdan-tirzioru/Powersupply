@@ -55,7 +55,6 @@ void InitDisplay2raw()
 	ub_state_Display2r = Display_no_init;
 }
 
-
 void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf)
 {
     T_UBYTE lubNumber=0;
@@ -64,16 +63,14 @@ void SetDisplay_VoltageD(double dVoltage,T_UBYTE *pubDisplay_buf)
 	T_UBYTE lubNumberInt=0;
 	T_UBYTE luwNumberSecFrac=0;
 
-    /*transform to 8 bit int part*/
- //   ubNumberINT = uwVoltage >> Voltage_Resol_Sh;
-    lubNumber = (T_UBYTE)dVoltage;
+	lubNumber = (T_UBYTE)dVoltage;
     lubNumberInt = lubNumber;
     lubFirstByte = lubNumber %10;
     lubNumber = lubNumber /10;
     lubSecondByte = lubNumber %10;
 
 	luwNumberFrac = ((dVoltage - lubNumberInt)*10);
-	luwNumberSecFrac = ((dVoltage - lubNumberInt)*100) - luwNumberFrac;
+	luwNumberSecFrac = ((dVoltage - lubNumberInt)*100) - luwNumberFrac*10;
 
     ubSecondByte = lubSecondByte;
 	pubDisplay_buf[4] = ubSecondByte + 0x30;
