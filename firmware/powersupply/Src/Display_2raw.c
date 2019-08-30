@@ -28,7 +28,7 @@
 
 
 T_UBYTE ubFirstByte,ubSecondByte,ubThrdByte,ubFourthByte;
-T_UWORD ubNumberINT,uwNumberFRC;
+T_UWORD ubNumberINT,uwNumberFRC,uwNumberSecFrac;
 T_UBYTE ub_state_Display2r;
 T_UBYTE ub_counter_1;
 T_UWORD uw_counter;
@@ -89,13 +89,15 @@ void SetDisplay_CurrentD(double dCurent,T_UBYTE *pubDisplay_buf)
     /*transform to 8 bit int part*/
     ubNumberINT = (T_UBYTE)dCurent;
     uwNumberFRC = (T_UWORD)((dCurent-ubNumberINT) * 10);
+    uwNumberSecFrac = ((dCurent-ubNumberINT)*100) - uwNumberFRC*10;
     ubFourthByte = uwNumberFRC;
     ubThrdByte = ubNumberINT;
     pubDisplay_buf[10] = 0x02F;
     pubDisplay_buf[11] = ubThrdByte + 0x30;
     pubDisplay_buf[12] =0x2E;
     pubDisplay_buf[13] = ubFourthByte + 0x30;
-    pubDisplay_buf[14] = 0x41;
+    pubDisplay_buf[14] = uwNumberSecFrac+0x30;
+    pubDisplay_buf[15] = 0x41;
 
 }
 

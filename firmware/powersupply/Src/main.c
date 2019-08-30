@@ -59,7 +59,6 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
-ADC_HandleTypeDef hadc3;
 
 DAC_HandleTypeDef hdac;
 
@@ -87,7 +86,6 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 void MX_ADC1_Init(void);
 void MX_ADC2_Init(void);
-void MX_ADC3_Init(void);
 void MX_DAC_Init(void);
 void MX_RTC_Init(void);
 void MX_SPI3_Init(void);
@@ -142,10 +140,9 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
-  MX_ADC3_Init();
- // MX_DAC_Init();
- // MX_RTC_Init();
- // MX_SPI3_Init();
+//  MX_DAC_Init();
+//  MX_RTC_Init();
+//  MX_SPI3_Init();
 //  MX_TIM4_Init();
 //  MX_USART1_UART_Init();
 //  MX_USB_OTG_HS_USB_Init();
@@ -345,43 +342,6 @@ void MX_ADC2_Init(void)
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc2, &sConfig) != HAL_OK)
-  {
-    _Error_Handler(__FILE__, __LINE__);
-  }
-
-}
-
-/* ADC3 init function */
-void MX_ADC3_Init(void)
-{
-
-  ADC_ChannelConfTypeDef sConfig;
-
-    /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
-    */
-  hadc3.Instance = ADC3;
-  hadc3.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
-  hadc3.Init.Resolution = ADC_RESOLUTION_12B;
-  hadc3.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc3.Init.ContinuousConvMode = DISABLE;
-  hadc3.Init.DiscontinuousConvMode = DISABLE;
-  hadc3.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-  hadc3.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc3.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc3.Init.NbrOfConversion = 1;
-  hadc3.Init.DMAContinuousRequests = DISABLE;
-  hadc3.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
-  if (HAL_ADC_Init(&hadc3) != HAL_OK)
-  {
-    _Error_Handler(__FILE__, __LINE__);
-  }
-
-    /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time. 
-    */
-  sConfig.Channel = ADC_CHANNEL_3;
-  sConfig.Rank = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
-  if (HAL_ADC_ConfigChannel(&hadc3, &sConfig) != HAL_OK)
   {
     _Error_Handler(__FILE__, __LINE__);
   }
@@ -726,8 +686,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB0 PB1 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+  /*Configure GPIO pins : PA3 PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB1 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
@@ -745,12 +711,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8;
-  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LCD_C2_Pin LCD_C1_Pin */
   GPIO_InitStruct.Pin = LCD_C2_Pin|LCD_C1_Pin;
@@ -821,11 +781,13 @@ void StartDefaultTask(void const * argument)
 	  sConfig.Channel = ADC_CHANNEL_0;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 	  HAL_ADC_Start(&hadc1);
+
+	  sConfig.Channel = ADC_CHANNEL_1;
+	  HAL_ADC_ConfigChannel(&hadc2, &sConfig);
 	  HAL_ADC_Start(&hadc2);
-	  HAL_ADC_Start(&hadc3);
+
 	  HAL_ADC_PollForConversion(&hadc1,ADC_TIMEOUT);
 	  HAL_ADC_PollForConversion(&hadc2,ADC_TIMEOUT);
-	  HAL_ADC_PollForConversion(&hadc3,ADC_TIMEOUT);
 	  /*get actual voltage ADC1VMeas*/
 	  ADC_LiniarVoltage = HAL_ADC_GetValue(&hadc1);
 	  d_ADCV1 = Convert_to_Voltage(ADC_LiniarVoltage);
@@ -836,16 +798,13 @@ void StartDefaultTask(void const * argument)
 	  /*get actual voltage ADC1IMeas*/
 	  ADC_LiniarCurrent = HAL_ADC_GetValue(&hadc2);
 	  d_ADCV2 = Convert_to_Voltage(ADC_LiniarCurrent);
-	  d_Isense = ADC_to_PhysicalINA169(d_ADCV2,0.29,4700);
+	  d_Isense = ADC_to_PhysicalINA169(d_ADCV2,0.27,4700);
 	  if (ub_DisplayPosible == 1)
 		  SetDisplay_CurrentD(d_Isense,(T_UBYTE *)&ubDisplay_buf[0]);
 
-	  ADC_BuckCurrent = HAL_ADC_GetValue(&hadc3);
-	  d_ADCVBUCKI = Convert_to_Voltage(ADC_BuckCurrent);
-	  d_IsenseBuck = ADC_to_PhysicalINA169(d_ADCVBUCKI,0.33,4700);
-	  if (ub_DisplayPosible == 1)
-		  SetDisplay_CurrentD(d_IsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
 
+
+	  /*get the buck output voltage*/
 	  sConfig.Channel = ADC_CHANNEL_2;
 	  HAL_ADC_ConfigChannel(&hadc1, &sConfig);
 	  HAL_ADC_Start(&hadc1);
@@ -855,6 +814,18 @@ void StartDefaultTask(void const * argument)
 	  d_UsenseBuck = ADC_to_Physical_VoltageDivider(d_ADCBuck,10000,1100);
 	  if (ub_DisplayPosible == 1)
 		  SetDisplay_VoltageD(d_UsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
+
+	  /*get the buck actual current*/
+	  sConfig.Channel = ADC_CHANNEL_8;
+	  HAL_ADC_ConfigChannel(&hadc2, &sConfig);
+	  HAL_ADC_Start(&hadc2);
+	  HAL_ADC_PollForConversion(&hadc2,ADC_TIMEOUT);
+
+	  ADC_BuckCurrent = HAL_ADC_GetValue(&hadc2);
+	  d_ADCVBUCKI = Convert_to_Voltage(ADC_BuckCurrent);
+	  d_IsenseBuck = ADC_to_PhysicalINA169(d_ADCVBUCKI,0.30,4700);
+	  if (ub_DisplayPosible == 1)
+		  SetDisplay_CurrentD(d_IsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
 
 	  ub_DisplayPosible = Dispaly2raw_task();
 	  osDelay(2);
