@@ -18,7 +18,7 @@ double ADC_to_Physical_VoltageDivider(double d_VoltageADC,uint32_t ui32RezistorU
 	return ret_Value;
 }
 
-double ADC_to_PhysicalINA169(uint16_t d_VoltageADC,double dRezitorSarcina,uint32_t ui32RezitorLeader)
+double ADC_to_PhysicalINA169(double d_VoltageADC,double dRezitorSarcina,uint32_t ui32RezitorLeader)
 {
 	/*Vout = IsRs(1000uA/V)(Rl)*/
 	/*Is=Vout/(Rs(1000uA/V)(Rl))*/

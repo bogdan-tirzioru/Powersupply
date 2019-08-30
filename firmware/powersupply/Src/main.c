@@ -836,13 +836,13 @@ void StartDefaultTask(void const * argument)
 	  /*get actual voltage ADC1IMeas*/
 	  ADC_LiniarCurrent = HAL_ADC_GetValue(&hadc2);
 	  d_ADCV2 = Convert_to_Voltage(ADC_LiniarCurrent);
-	  d_Isense = ADC_to_PhysicalINA169(d_ADCV2,0.33,1000);
+	  d_Isense = ADC_to_PhysicalINA169(d_ADCV2,0.29,4700);
 	  if (ub_DisplayPosible == 1)
 		  SetDisplay_CurrentD(d_Isense,(T_UBYTE *)&ubDisplay_buf[0]);
 
 	  ADC_BuckCurrent = HAL_ADC_GetValue(&hadc3);
 	  d_ADCVBUCKI = Convert_to_Voltage(ADC_BuckCurrent);
-	  d_IsenseBuck = ADC_to_PhysicalINA169(d_ADCVBUCKI,0.33,1000);
+	  d_IsenseBuck = ADC_to_PhysicalINA169(d_ADCVBUCKI,0.33,4700);
 	  if (ub_DisplayPosible == 1)
 		  SetDisplay_CurrentD(d_IsenseBuck,(T_UBYTE *)&ubDisplay_buf2[0]);
 
