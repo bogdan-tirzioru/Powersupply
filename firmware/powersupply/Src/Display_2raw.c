@@ -1,6 +1,7 @@
 #include "micro.h"
 #include "Display_2raw.h"
 #include "dwt_delay.h"
+#include "main.h"
 
 #define InitWait40ms 20
 #define InitWait2ms 1

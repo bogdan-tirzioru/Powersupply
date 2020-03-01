@@ -27,3 +27,11 @@ double ADC_to_PhysicalINA169(double d_VoltageADC,double dRezitorSarcina,uint32_t
 			ret_ValueI = (double)d_VoltageADC /(dRezitorSarcina*0.001*ui32RezitorLeader);
 	return ret_ValueI;
 }
+
+double ADC_to_PhysicalIntrumentationAmplifier(double d_VoltageADC,double dRezitorSarcina,double dfactorInstrumentation)
+{
+	double ret_ValueI=0; /*Current returned in phisical*/
+	if ((dRezitorSarcina !=0)&&(dfactorInstrumentation!=0))
+		ret_ValueI = (double)d_VoltageADC /(dfactorInstrumentation*dRezitorSarcina);
+	return ret_ValueI;
+}
