@@ -1,0 +1,7 @@
+Added Component: Designator=D5(DO214AA)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=DGND Pin=D5-A
+Added Pin To Net: NetName=NetC25_1 Pin=D5-C
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component D5 VS-10BQ100-M3/5BT
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=NetJP2_1 Pin=JP2-1
+Added Component: Designator=D1(SOT23)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetR23_2 Pin=D1-1
+Added Pin To Net: NetName=NetJP2_1 Pin=D1-2
+Added Pin To Net: NetName=NetJP2_2 Pin=D1-3
+Change Net Name : Old Net Name=NetJP2_1 New Net Name=NetD1_2
+Change Net Name : Old Net Name=NetJP2_2 New Net Name=NetD1_3
+Change Net Name : Old Net Name=NetR23_2 New Net Name=NetD1_1
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component D1 BA70-06
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

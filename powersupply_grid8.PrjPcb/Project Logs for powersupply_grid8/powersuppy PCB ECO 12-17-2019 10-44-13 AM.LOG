@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=JP2-1
+Change Net Name : Old Net Name=NetC18_+ New Net Name=NetC18_pin_p
+Added Pin To Net: NetName=NetD1_3 Pin=JP2-1
+Added Net: Name=NetD1_3
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

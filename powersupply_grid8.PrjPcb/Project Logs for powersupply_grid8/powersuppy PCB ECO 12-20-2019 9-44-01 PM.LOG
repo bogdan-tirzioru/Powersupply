@@ -1,0 +1,12 @@
+Added Pin To Net: NetName=AGND Pin=BR1--
+Added Pin To Net: NetName=DGND Pin=C9-1
+Added Pin To Net: NetName=DGND Pin=C10-1
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C22 100n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C24 22n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C25 220n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C26 220n
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component L2 DE1207-47
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R48 Res2
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component U3 IFX91041
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

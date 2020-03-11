@@ -1,0 +1,10 @@
+Added Component: Designator=C100(C0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "SPICEPREFIX"; Value = "C"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DGND Pin=C100-2
+Added Pin To Net: NetName=NetC100_1 Pin=C100-1
+Added Pin To Net: NetName=NetC100_1 Pin=U1-30
+Added Net: Name=NetC100_1
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C100 4.7u
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=VREF Pin=U1-13
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R24
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R25
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R26
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R27
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R28
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R29
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=R30
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R33
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R35
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R37
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R39
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R41
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R43
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=R44
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=SV1
+Removed Member From Class: ClassName=powersupply_grid8_1 Member=SV2
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=SV3
+Removed Member From Class: ClassName=powersupply_grid8_0 Member=SV4
+Added Pin To Net: NetName=+3V3 Pin=U1-13
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C9 10p
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component C10 10p
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component L1 WE-CBF_0603
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R24 100
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R25 10
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R26 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R27 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R28 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R29 1k
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component R30 1k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R39 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R40 1M
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R42 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R43 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R44 10k
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R45 Res2
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component R46 Res2
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component SV1 MA03-1
+Added Member To Class: ClassName=powersupply_grid8_0 Member=Component SV2 MA03-1
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component SV3 ML6
+Added Member To Class: ClassName=powersupply_grid8_1 Member=Component SV4 ML6
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1

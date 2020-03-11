@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetD1_3 Pin=D1-3
+Change Net Name : Old Net Name=NetD1_3 New Net Name=NetJP2_2
+Added Pin To Net: NetName=NetD1_3 Pin=D1-3
+Added Pin To Net: NetName=NetD1_3 Pin=JP2-1
+Added Net: Name=NetD1_3
+Added Room: Name=powersupply_grid8_0
+Added Room: Name=powersupply_grid8_1
