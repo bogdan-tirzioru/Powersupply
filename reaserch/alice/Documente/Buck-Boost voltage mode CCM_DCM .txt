@@ -1,0 +1,13 @@
+
+Switch-Mode Power Supplies Spice Simulations and Practical Designs.pdf
+
+
+  THE BUCK CONVERTER
+1. Proiectare componente de forta --> pag. 407 - 410
+2. Functie transfer buck  voltage mode, CCM/DCM: -->pag. 226 -227
+
+
+
+THE Boost  CONVERTER
+1. Proiectare componente de forta --> pag. 441 - 444
+2. Functie transfer boost  voltage mode, CCM/DCM: -->pag. 229-230
